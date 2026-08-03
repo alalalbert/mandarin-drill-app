@@ -52,6 +52,9 @@
   .opt.wrong{border-color:var(--red)}.opt.wrong,.opt.wrong b{color:var(--red)}
   #foot{margin:auto 0 12px;padding-top:12px;color:var(--muted);font-size:13px;
         text-align:center;min-height:38px}
+  /* The reveal is the thing being studied, not chrome -- it gets real type,
+     and wraps: hanzi + pinyin + meaning + hint can run long. */
+  #foot.reveal{color:var(--fg);font-size:19px;font-weight:500;line-height:1.35}
   #done h1{margin:auto 0 8px}
   #done .sub{margin-bottom:auto;padding-bottom:20px}
   .status{font-size:12px;color:var(--dim);text-align:center;min-height:16px;margin-bottom:6px}
@@ -391,6 +394,7 @@ function render() {
   locked = false;
   awaitingNext = false;
   $('d-next').style.display = 'none';
+  $('foot').classList.remove('reveal');
   $('d-kicker').textContent = KICKER[c.dir] || 'CHOOSE THE MEANING';
   $('prompt').textContent = c.prompt;
   const opts = c.options.slice();
@@ -447,18 +451,16 @@ function pick(el, opt, c) {
   $('foot').textContent = ok
       ? ['Correct'].concat(reveal).join('  —  ')
       : reveal.concat(c.hint ? [c.hint] : []).join('  —  ');
+  $('foot').classList.add('reveal');
   if (ok) right++; else wrong++;
   if (navigator.vibrate) navigator.vibrate(ok ? 10 : [30, 40, 30]);
 
   commitLocal(c, ok);
-  if (ok) {
-    setTimeout(next, 1800);
-  } else {
-    // Wrong answers hold the reveal until the operator taps Next -- this is
-    // where the studying happens: read the character, say the pinyin aloud.
-    awaitingNext = true;
-    $('d-next').style.display = '';
-  }
+  // Every graded card holds its reveal until the operator taps Next -- right
+  // answers included. Guessing correctly is easy; the pause is where the
+  // hanzi — pinyin — meaning triple actually gets studied.
+  awaitingNext = true;
+  $('d-next').style.display = '';
 }
 
 function advance() {
