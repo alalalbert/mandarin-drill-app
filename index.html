@@ -379,11 +379,27 @@ function start(mode) {
     q = SRS.selectQueue(cards, state, 'all', new Date());
   }
   if (!q.length) { status('Nothing to study for that.'); return; }
-  queue = q.map(([card]) => card);
+  queue = q.map(([card]) =>
+      Object.assign({}, card, { options: serveOptions(card) }));
   idx = 0; right = 0; wrong = 0;
   show('drill'); render();
 }
 function startCrank() { crankEnd = Date.now() + 30 * 60000; start('due'); }
+
+/* A card's options are a POOL: the answer plus 3..N distractors. Each
+   serving shows the answer plus a random sample of three distractors, so
+   repeat viewings of a card vary -- drill.py's build_payload does the same
+   on the Mac. Sampled here, once per serving, and the queue gets a shallow
+   copy so the deck itself is never mutated. A legacy 4-option card yields
+   exactly its four options; render() shuffles either way. */
+function serveOptions(c) {
+  const pool = c.options.filter(o => o !== c.answer);
+  for (let i = pool.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+  return pool.slice(0, 3).concat([c.answer]);
+}
 
 const KICKER = { zh2en: 'CHOOSE THE MEANING',
                  en2zh: 'CHOOSE THE CHINESE',
