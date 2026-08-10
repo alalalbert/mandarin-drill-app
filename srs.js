@@ -201,7 +201,7 @@ const SRS = {
     if (mode === 'due') return SRS.orderQueue(SRS.dueCards(cards, state, now));
 
     let pool;
-    if (mode === 'vocab' || mode === 'sentences') {
+    if (mode === 'vocab' || mode === 'sentences' || mode === 'numbers') {
       pool = cards.filter(c => c.cat === mode);
     } else if (mode === 'zh2en' || mode === 'en2zh' || mode === 'zh2py') {
       pool = cards.filter(c => c.dir === mode);
