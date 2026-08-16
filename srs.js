@@ -19,6 +19,10 @@ const SRS = {
   MIN_SESSION: 5,
   ORDER_SLACK: 5,
 
+  // Mirrors drill.py: quarantined cats never surface on their own -- not in
+  // due sessions, not in the due count. Only via an explicit mode choice.
+  QUARANTINED_CATS: new Set(['phrases']),
+
   // Local-time ISO without milliseconds, matching Python's isoformat --
   // the two sides must produce comparable strings.
   iso(d) {
@@ -90,10 +94,11 @@ const SRS = {
     return s % 2 ? 'en2zh' : 'zh2en';
   },
 
-  dueCards(cards, state, now) {
+  dueCards(cards, state, now, includeQuarantined) {
     const nowIso = SRS.iso(now);
     const out = [];
     for (const c of SRS.drillable(cards)) {
+      if (!includeQuarantined && SRS.QUARANTINED_CATS.has(c.cat)) continue;
       const e = SRS.entryFor(state, c.id);
       if (e.due <= nowIso) out.push([c, e]);
     }
@@ -222,7 +227,8 @@ const SRS = {
     }
 
     if (mode !== 'hardest') {
-      const dueIds = new Set(SRS.dueCards(cards, state, now).map(p => p[0].id));
+      const dueIds = new Set(
+          SRS.dueCards(cards, state, now, true).map(p => p[0].id));
       const head = pool.filter(c => dueIds.has(c.id));
       const tail = pool.filter(c => !dueIds.has(c.id));
       for (let i = tail.length - 1; i > 0; i--) {
