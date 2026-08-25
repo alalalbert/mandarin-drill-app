@@ -169,13 +169,21 @@ const SRS = {
 
     const limitNew = (newCap === undefined || newCap === null)
         ? SRS.NEW_PER_SESSION : newCap;
-    let picked = seenPrimary.slice(0, cap);
-    let room = Math.min(cap - picked.length, limitNew);
-    if (newPrimary.length && room < Math.min(SRS.NEW_RESERVED, limitNew)) {
-      picked = seenPrimary.slice(0, Math.max(0, cap - SRS.NEW_RESERVED));
-      room = Math.min(cap - picked.length, limitNew);
-    }
+    // Reserve only as many slots as there is new material to fill them --
+    // holding back six for two arrivals is what made a capped session
+    // come out at 16.
+    const reserve = Math.min(SRS.NEW_RESERVED, limitNew, newPrimary.length);
+    const seenTake = Math.min(seenPrimary.length, Math.max(0, cap - reserve));
+    let picked = seenPrimary.slice(0, seenTake);
+    const room = Math.min(cap - picked.length, limitNew);
     if (room > 0) picked = picked.concat(newPrimary.slice(0, room));
+    // New material is capped, not guaranteed. When fewer new cards turn up
+    // than the session has room for, the reviews that stood aside take the
+    // leftover slots back rather than the session running short.
+    if (picked.length < cap) {
+      picked = picked.concat(
+        seenPrimary.slice(seenTake, seenTake + (cap - picked.length)));
+    }
     if (picked.length < SRS.MIN_SESSION) {
       for (const extra of [seenHeld, newHeld]) {
         if (picked.length < cap) {
