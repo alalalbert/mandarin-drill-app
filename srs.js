@@ -21,7 +21,7 @@ const SRS = {
 
   // Mirrors drill.py: quarantined cats never surface on their own -- not in
   // due sessions, not in the due count. Only via an explicit mode choice.
-  QUARANTINED_CATS: new Set(['phrases']),
+  QUARANTINED_CATS: new Set(['phrases', 'simple']),
 
   // Local-time ISO without milliseconds, matching Python's isoformat --
   // the two sides must produce comparable strings.
@@ -208,6 +208,14 @@ const SRS = {
     return out;
   },
 
+  // Rung of the simple-sentence ladder, from an id like simple:l3-wo-chifan.
+  // Anything without a level sorts last. Mirror of level_of in drill.py.
+  levelOf(card) {
+    const slug = card.id.split(':')[1] || '';
+    return (slug[0] === 'l' && slug[1] >= '0' && slug[1] <= '9')
+        ? Number(slug[1]) : 99;
+  },
+
   selectQueue(cards, state, mode, now) {
     now = now || new Date();
     cards = SRS.drillable(cards);
@@ -215,7 +223,7 @@ const SRS = {
 
     let pool;
     if (mode === 'vocab' || mode === 'sentences' || mode === 'numbers' ||
-        mode === 'phrases') {
+        mode === 'phrases' || mode === 'simple') {
       pool = cards.filter(c => c.cat === mode);
     } else if (mode === 'zh2en' || mode === 'en2zh' || mode === 'zh2py') {
       pool = cards.filter(c => c.dir === mode);
@@ -239,9 +247,16 @@ const SRS = {
           SRS.dueCards(cards, state, now, true).map(p => p[0].id));
       const head = pool.filter(c => dueIds.has(c.id));
       const tail = pool.filter(c => !dueIds.has(c.id));
-      for (let i = tail.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [tail[i], tail[j]] = [tail[j], tail[i]];
+      if (mode === 'simple') {
+        // The simple-sentence ladder is meant to be climbed: two-character
+        // sentences before three, three before four. Shuffling the unseen
+        // tail would hand you a five-character sentence on day one.
+        tail.sort((a, b) => SRS.levelOf(a) - SRS.levelOf(b));
+      } else {
+        for (let i = tail.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [tail[i], tail[j]] = [tail[j], tail[i]];
+        }
       }
       pool = head.concat(tail);
     }
