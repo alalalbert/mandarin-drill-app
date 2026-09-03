@@ -105,6 +105,7 @@
     <button onclick="start('phrases')">Phrases</button>
     <button onclick="start('simple')">Simple</button>
   </div>
+  <button id="b-token" onclick="replaceToken()">Replace token</button>
   <button id="b-notif" onclick="enablePush()" style="display:none">Enable notifications</button>
   <div class="status" id="h-status"></div>
 </div>
@@ -194,8 +195,13 @@ async function preflight() {
     throw new Error('Cannot reach GitHub. Check the connection.');
   }
   if (r.status === 401) {
-    throw new Error('GitHub rejected the token. Paste the whole value — ' +
-        'it starts with github_pat_ and is one long line with no spaces.');
+    // 401 covers both an expired/revoked token and a truncated paste, so the
+    // message has to name both rather than guess at one.
+    const e = new Error('GitHub rejected the token — it has expired, been ' +
+        'revoked, or was pasted incompletely (it is one long line starting ' +
+        'with github_pat_).');
+    e.auth = true;
+    throw e;
   }
   if (r.status === 404) {
     throw new Error('That token cannot see ' + CFG.owner + '/' + CFG.repo +
@@ -309,7 +315,11 @@ async function loadAll() {
     return true;
   } catch (e) {
     if (!cards || !cards.length) throw e;
-    status('offline — using cached deck', true);
+    authFailed = !!e.auth;
+    status(e.auth
+        ? 'token expired — drilling still works and nothing is lost, but '
+          + 'syncing is off. Tap "Replace token".'
+        : 'offline — using cached deck', true);
     return false;
   }
 }
@@ -372,6 +382,19 @@ function renderHome() {
     b.innerHTML = 'Enable notifications';
   } else {
     b.style.display = 'none';
+  }
+
+  // The token button is always available, but when syncing is actually broken
+  // it should say so rather than looking like a settings item nobody needs.
+  const tb = $('b-token');
+  if (tb) {
+    const n = pendingReviews.length;
+    tb.innerHTML = authFailed
+        ? 'Replace expired token<small>syncing is off'
+          + (n ? ' · ' + n + ' card' + (n === 1 ? '' : 's') + ' waiting to upload' : '')
+          + '</small>'
+        : 'Replace token';
+    tb.className = authFailed ? 'primary' : '';
   }
 }
 function goHome() { show('home'); renderHome(); flushReviews(); }
@@ -541,6 +564,21 @@ async function enablePush() {
 }
 
 /* -------------------------------- boot ----------------------------------- */
+let authFailed = false;
+
+// Re-show the connect screen so a lapsed token can be replaced in place.
+// Deliberately does not clear localStorage: pendingReviews lives there, and
+// wiping it would throw away drilling that has not been uploaded yet.
+function replaceToken() {
+  $('tok').value = '';
+  const n = pendingReviews.length;
+  $('s-err').textContent = n
+      ? n + ' graded card' + (n === 1 ? '' : 's') + ' waiting to upload. '
+        + 'They are safe on this phone — paste a new token to send them.'
+      : '';
+  show('setup');
+}
+
 async function saveToken() {
   TOKEN = $('tok').value.trim();
   if (!TOKEN) return;
