@@ -55,6 +55,10 @@
   /* The reveal is the thing being studied, not chrome -- it gets real type,
      and wraps: hanzi + pinyin + meaning + hint can run long. */
   #foot.reveal{color:var(--fg);font-size:19px;font-weight:500;line-height:1.35}
+  /* The breakdown and the example sit under the reveal, a step quieter than
+     it but still readable -- they are studied, not skimmed. */
+  #foot .study{font-size:15px;font-weight:400;color:var(--muted);
+               line-height:1.4;margin-top:6px}
   #done h1{margin:auto 0 8px}
   #done .sub{margin-bottom:auto;padding-bottom:20px}
   .status{font-size:12px;color:var(--dim);text-align:center;min-height:16px;margin-bottom:6px}
@@ -491,9 +495,20 @@ function pick(el, opt, c) {
     else if (d === el) d.classList.add('wrong');
   });
   const reveal = revealFor(c);
-  $('foot').textContent = ok
-      ? ['Correct'].concat(reveal).join('  —  ')
-      : reveal.concat(c.hint ? [c.hint] : []).join('  —  ');
+  // parts + example show on every reveal, right or wrong: they are the
+  // lesson. `hint` stays miss-only -- it is a nudge, not content.
+  const head = ok ? ['Correct'].concat(reveal).join('  —  ')
+                  : reveal.concat(c.hint ? [c.hint] : []).join('  —  ');
+  const study = [c.parts, c.example].filter(Boolean);
+  $('foot').textContent = head;
+  if (study.length) {
+    for (const line of study) {
+      const d = document.createElement('div');
+      d.className = 'study';
+      d.textContent = line;
+      $('foot').appendChild(d);
+    }
+  }
   $('foot').classList.add('reveal');
   if (ok) right++; else wrong++;
   if (navigator.vibrate) navigator.vibrate(ok ? 10 : [30, 40, 30]);
