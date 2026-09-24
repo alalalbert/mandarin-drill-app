@@ -184,6 +184,18 @@ async function getFile(name) {
   if (r.status === 404) return { text: null, sha: null };
   if (!r.ok) throw new Error(name + ': HTTP ' + r.status);
   const j = await r.json();
+  // Above 1 MB the contents API answers 200 with encoding "none" and an
+  // EMPTY body -- no error to catch. cards.json crossed that line, the deck
+  // came back blank, and the app reported itself offline. The sha is still
+  // there, and the blob API serves the same object up to 100 MB.
+  if (j.encoding === 'none' || (!j.content && j.size)) {
+    const b = await gh('/repos/' + CFG.owner + '/' + CFG.repo +
+                       '/git/blobs/' + j.sha);
+    if (!b.ok) throw new Error(name + ' is ' + j.size +
+                               ' bytes and the blob fetch failed: HTTP ' + b.status);
+    const bj = await b.json();
+    return { text: dec(bj.content), sha: j.sha };
+  }
   return { text: dec(j.content), sha: j.sha };
 }
 
