@@ -251,7 +251,13 @@ const SRS = {
       // forever -- and those sit near the front of the file, so they came
       // back on literally every press. A missed card is not new; it is
       // already waiting in "hardest" and in its own due session.
-      pool = cards.filter(c => !SRS.everAnswered(SRS.entryFor(state, c.id)));
+      // Quarantined cats stay out. 58% of the unseen deck is phrases and
+      // simple-ladder cards, so without this "New" becomes mostly those --
+      // and the ladder would get handed out in batch order, which means a
+      // five-character sentence before the three-character ones. Both sets
+      // have their own button, which serves them in their own order.
+      pool = cards.filter(c => !SRS.QUARANTINED_CATS.has(c.cat) &&
+                               !SRS.everAnswered(SRS.entryFor(state, c.id)));
     } else if (mode === 'lesson') {
       const tags = [...new Set(cards.map(c => c.lesson).filter(Boolean))].sort();
       const latest = tags[tags.length - 1];
