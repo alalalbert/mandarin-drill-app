@@ -36,6 +36,12 @@ const SRS = {
                           ease: SRS.EASE_START, reps: 0, lapses: 0 };
   },
 
+  // Has this card been put in front of you and graded, right or wrong?
+  // reps counts CORRECT answers only, so it cannot answer this on its own:
+  // a card missed twice still had reps === 0 and so still read as "new".
+  // Mirror of ever_answered in drill.py.
+  everAnswered(entry) { return entry.reps > 0 || entry.lapses > 0; },
+
   grade(entry, correct, now) {
     const e = Object.assign({}, entry);
     let wait;
@@ -103,7 +109,12 @@ const SRS = {
       if (e.due <= nowIso) out.push([c, e]);
     }
     out.sort((x, y) => {
-      const nx = x[1].reps === 0 ? 1 : 0, ny = y[1].reps === 0 ? 1 : 0;
+      // Reviews first, then never-seen material. "Never seen" has to mean
+      // never answered -- keyed off reps alone, a card you had missed but
+      // never got right sorted as new and so queued up behind every unseen
+      // card in the deck.
+      const nx = SRS.everAnswered(x[1]) ? 0 : 1;
+      const ny = SRS.everAnswered(y[1]) ? 0 : 1;
       if (nx !== ny) return nx - ny;
       return x[1].due < y[1].due ? -1 : x[1].due > y[1].due ? 1 : 0;
     });
@@ -160,8 +171,10 @@ const SRS = {
       return [primary, held];
     };
 
-    const [seenPrimary, seenHeld] = arrange(pairs.filter(p => p[1].reps > 0));
-    let [newPrimary, newHeld] = arrange(pairs.filter(p => p[1].reps === 0));
+    const [seenPrimary, seenHeld] =
+        arrange(pairs.filter(p => SRS.everAnswered(p[1])));
+    let [newPrimary, newHeld] =
+        arrange(pairs.filter(p => !SRS.everAnswered(p[1])));
 
     const reviewed = new Set(seenPrimary.map(p => SRS.baseOf(p[0].id)));
     newHeld = newHeld.concat(newPrimary.filter(p => reviewed.has(SRS.baseOf(p[0].id))));
@@ -193,8 +206,8 @@ const SRS = {
     }
 
     const out = [];
-    for (const tier of [picked.filter(p => p[1].reps > 0),
-                        picked.filter(p => p[1].reps === 0)]) {
+    for (const tier of [picked.filter(p => SRS.everAnswered(p[1])),
+                        picked.filter(p => !SRS.everAnswered(p[1]))]) {
       const remaining = tier.slice();
       while (remaining.length) {
         const scored = remaining.map((cand, i) => [SRS.penalty(cand, out, gap), i]);
@@ -233,7 +246,12 @@ const SRS = {
         return (eb.lapses - ea.lapses) || (ea.ease - eb.ease);
       }).filter(c => SRS.entryFor(state, c.id).lapses > 0);
     } else if (mode === 'new') {
-      pool = cards.filter(c => SRS.entryFor(state, c.id).reps === 0);
+      // "New" means not yet introduced. Keying that off reps === 0 kept
+      // every card you had answered but never got RIGHT in the pool
+      // forever -- and those sit near the front of the file, so they came
+      // back on literally every press. A missed card is not new; it is
+      // already waiting in "hardest" and in its own due session.
+      pool = cards.filter(c => !SRS.everAnswered(SRS.entryFor(state, c.id)));
     } else if (mode === 'lesson') {
       const tags = [...new Set(cards.map(c => c.lesson).filter(Boolean))].sort();
       const latest = tags[tags.length - 1];
@@ -242,7 +260,29 @@ const SRS = {
       pool = cards.slice();
     }
 
-    if (mode !== 'hardest') {
+    if (mode === 'new') {
+      // Never-answered cards all carry the epoch default due date, so the
+      // due/not-due split below swept every one of them into `head`, which
+      // is not shuffled -- leaving this button permanently parked on
+      // whatever was oldest in cards.json. Batches are appended, so that
+      // was the material from the week the button was written, and with a
+      // four-figure unseen backlog it could never walk far enough forward
+      // to reach anything recent.
+      //
+      // Order by batch instead, newest first, so "New" tracks what was
+      // actually just added. The older unseen backlog is not orphaned:
+      // the scheduled due sessions introduce it oldest-first, a few cards
+      // at a time, which is what NEW_PER_SESSION is for.
+      //
+      // Array.prototype.sort is stable (ES2019), as is Python's sorted with
+      // reverse=True, so cards inside one batch keep their file order on
+      // both sides.
+      const tag = c => c.lesson || '';
+      pool = pool.slice().sort((a, b) => {
+        const ta = tag(a), tb = tag(b);
+        return ta < tb ? 1 : ta > tb ? -1 : 0;
+      });
+    } else if (mode !== 'hardest') {
       const dueIds = new Set(
           SRS.dueCards(cards, state, now, true).map(p => p[0].id));
       const head = pool.filter(c => dueIds.has(c.id));
