@@ -2,8 +2,10 @@
 // offline, from the last sync), and turns Web Push messages from the Mac
 // into native notifications.
 'use strict';
-const CACHE = 'mandarin-v1';
-const SHELL = ['./', './index.html', './srs.js', './config.json',
+// Bumped to v2 for the recall-practice release: learn.js joined the shell,
+// and a shell that is missing one of its scripts fails to launch offline.
+const CACHE = 'mandarin-v2';
+const SHELL = ['./', './index.html', './srs.js', './learn.js', './config.json',
                './manifest.webmanifest', './icon-180.png', './icon-512.png'];
 
 self.addEventListener('install', e => {
@@ -11,7 +13,17 @@ self.addEventListener('install', e => {
               .then(() => self.skipWaiting()));
 });
 self.addEventListener('activate', e => {
-  e.waitUntil(self.clients.claim());
+  // Drop superseded shell caches only. Nothing here may touch localStorage,
+  // the learn.* log, its outbox, or any progress export -- a cache cleanup
+  // that deleted learning records would be the worst possible bug in an
+  // update path.
+  e.waitUntil((async () => {
+    const names = await caches.keys();
+    await Promise.all(names
+        .filter(n => n.startsWith('mandarin-') && n !== CACHE)
+        .map(n => caches.delete(n)));
+    await self.clients.claim();
+  })());
 });
 
 // Network-first for the shell so updates land, cache as fallback for offline.

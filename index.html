@@ -67,6 +67,25 @@
            border-radius:12px;padding:12px;font:14px ui-monospace,monospace;min-height:84px;
            margin:14px 0}
   #setup p{color:var(--muted);font-size:14px;line-height:1.5;margin-top:12px}
+  /* --- recall practice --- */
+  /* The character is the whole question here, so it gets far more room than
+     a multiple-choice prompt: nothing else is on screen to compete. */
+  #r-body{flex:1 1 auto;display:flex;flex-direction:column;
+          align-items:center;justify-content:center;min-height:0;gap:18px}
+  #r-face{font-size:76px;font-weight:500;line-height:1.1;text-align:center}
+  #r-study{color:var(--fg);font-size:18px;line-height:1.4;text-align:center;
+           padding:0 2px}
+  #r-study .py{font-size:22px;font-weight:600;color:var(--green);margin-bottom:2px}
+  #r-study .mn{font-size:19px;font-weight:500;margin-bottom:8px}
+  #r-study .st{font-size:14px;font-weight:400;color:var(--muted);line-height:1.45;
+               margin-top:5px}
+  .rate{margin-top:14px}
+  .rate .q{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--muted);
+           margin-bottom:6px;text-align:center}
+  .rate .row{display:flex;gap:8px}
+  .rate .row button{margin-bottom:0;padding:12px 6px;font-size:15px}
+  .rate button.sel{border-color:var(--blue);color:var(--blue);font-weight:600}
+  .rate.done .q{color:var(--dim)}
   #setup a{color:var(--blue)}
 </style>
 </head>
@@ -109,6 +128,11 @@
     <button onclick="start('phrases')">Phrases</button>
     <button onclick="start('simple')">Simple</button>
   </div>
+  <div class="pair" id="h-learn">
+    <button class="crank" onclick="startRecall()">Recall practice<small id="b-recall-sub">rate yourself</small></button>
+    <button onclick="exportProgress()">Export<small>save a copy</small></button>
+  </div>
+  <button id="b-learn-off" onclick="toggleLearn()"></button>
   <button id="b-token" onclick="replaceToken()">Replace token</button>
   <button id="b-notif" onclick="enablePush()" style="display:none">Enable notifications</button>
   <div class="status" id="h-status"></div>
@@ -122,6 +146,19 @@
   <button class="primary" id="d-next" style="display:none" onclick="advance()">Next</button>
 </div>
 
+<div id="recall" class="screen">
+  <div class="kicker" id="r-kicker">RECALL IT, THEN REVEAL</div>
+  <div id="r-body">
+    <div id="r-face"></div>
+    <div id="r-study"></div>
+  </div>
+  <div id="r-rate"></div>
+  <button class="primary" id="r-reveal" onclick="revealRecall()">Reveal</button>
+  <button id="r-blank" onclick="revealBlank()">No idea</button>
+  <button class="primary" id="r-next" style="display:none" onclick="nextRecall()">Next</button>
+  <div class="status" id="r-status"></div>
+</div>
+
 <div id="done" class="screen">
   <h1 id="done-line"></h1>
   <div class="sub" id="done-sub"></div>
@@ -130,6 +167,7 @@
 </div>
 
 <script src="./srs.js"></script>
+<script src="./learn.js"></script>
 <script>
 'use strict';
 /* Progress lives in a private GitHub repo that this page and the Mac both
@@ -361,6 +399,7 @@ function summary() {
            streak, seenCards };
 }
 function renderHome() {
+  renderLearnHome();
   const s = summary();
   $('h-due').textContent = s.due > 0 ? s.due + ' cards due' : 'All caught up';
   $('h-due').style.color = s.due > 0 ? '' : 'var(--green)';
@@ -413,7 +452,39 @@ function renderHome() {
     tb.className = authFailed ? 'primary' : '';
   }
 }
-function goHome() { show('home'); renderHome(); flushReviews(); }
+function goHome() {
+  show('home');
+  renderHome();
+  flushReviews();
+  flushLearn();
+}
+
+function toggleLearn() {
+  LEARN.setEnabled(!LEARN.enabled());
+  renderHome();
+}
+
+/* Recall practice reports its own numbers and says whose they are. It is
+   never folded into the Classic counts: those are machine-graded choices and
+   these are self-ratings, and one total covering both would be a fiction. */
+function renderLearnHome() {
+  const on = LEARN.enabled();
+  $('h-learn').style.display = on ? '' : 'none';
+  $('b-learn-off').innerHTML = on
+      ? 'Use Classic only<small>hides recall practice</small>'
+      : 'Turn recall practice back on';
+  if (!on) return;
+  const proj = LEARN.projectSkills(LEARN.events(), SRS);
+  const practised = Object.keys(proj).length;
+  const twoDay = Object.values(proj).filter(st =>
+      /two different days/.test(LEARN.skillLabel(st.meaning))).length;
+  const pending = LEARN.pending().length;
+  const bits = [practised + '/' + LEARN.PILOT.length + ' tried'];
+  if (twoDay) bits.push(twoDay + ' on 2 days');
+  if (pending) bits.push(pending + ' to upload');
+  bits.push('self-rated');
+  $('b-recall-sub').textContent = bits.join(' · ');
+}
 
 /* -------------------------------- drill --------------------------------- */
 function start(mode) {
@@ -538,6 +609,209 @@ function advance() {
   awaitingNext = false;
   $('d-next').style.display = 'none';
   next();
+}
+
+/* --------------------------- recall practice ---------------------------- */
+/* The opt-in mode: see the character alone, try to remember it, reveal, then
+   rate yourself on pronunciation and meaning separately.
+
+   Nothing here touches Classic. It does not read or write `state`, does not
+   append to pendingReviews, and does not call pushState -- its records go to
+   learn.* locally and learning-v2/ remotely. test-learn.js holds that line
+   with a spying store. The reveal is also built only at reveal time, so the
+   answer is not sitting in the DOM while you are still trying to recall it. */
+let rQueue = [], rIdx = 0, rSession = null, rRatings = null, rRevealed = false;
+
+// Pilot items are stored as base ids; the content comes from the deck we
+// already loaded, so no deck text is duplicated into this repo.
+function recallCard(baseId) {
+  const c = cards.find(x => x.id === baseId + ':zh2en');
+  if (!c) return null;
+  return { itemId: baseId, hanzi: c.prompt, meaning: c.answer,
+           pinyin: c.pinyin || '', parts: c.parts || '', example: c.example || '' };
+}
+
+function startRecall() {
+  if (!cards.length) { status('Deck not loaded yet.'); return; }
+  const proj = LEARN.projectSkills(LEARN.events(), SRS);
+  rQueue = LEARN.dueItems(proj, new Date()).map(recallCard).filter(Boolean);
+  if (!rQueue.length) { status('No recall items available.'); return; }
+  rSession = LEARN.uuid();
+  rIdx = 0;
+  show('recall');
+  renderRecall();
+}
+
+function renderRecall() {
+  const c = rQueue[rIdx];
+  rRevealed = false;
+  rRatings = { pronunciation: null, meaning: null, revealedAt: null };
+  $('r-kicker').textContent =
+      'SAY IT AND MEAN IT  ·  ' + (rIdx + 1) + ' / ' + rQueue.length;
+  $('r-face').textContent = c.hanzi;
+  $('r-study').innerHTML = '';          // nothing revealed is in the DOM yet
+  $('r-rate').innerHTML = '';
+  $('r-reveal').style.display = '';
+  $('r-blank').style.display = '';
+  $('r-next').style.display = 'none';
+  $('r-status').textContent = '';
+}
+
+/* Two entry points, not one boolean. The markup used to pass an array here
+   and an empty array is truthy, so every ordinary Reveal was being recorded
+   as a total miss. Named functions cannot be got wrong from the call site. */
+function revealRecall() { doReveal(false); }
+function revealBlank() { doReveal(true); }
+
+function doReveal(blank) {
+  if (rRevealed) return;
+  rRevealed = true;
+  rRatings.revealedAt = new Date().toISOString();
+  const c = rQueue[rIdx];
+  const box = $('r-study');
+  box.innerHTML = '';
+  const add = (cls, text) => {
+    if (!text) return;
+    const d = document.createElement('div');
+    d.className = cls;
+    d.textContent = text;
+    box.appendChild(d);
+  };
+  add('py', c.pinyin);
+  add('mn', c.meaning);
+  add('st', c.parts);
+  add('st', c.example);
+  $('r-reveal').style.display = 'none';
+  $('r-blank').style.display = 'none';
+  if (navigator.vibrate) navigator.vibrate(8);
+
+  // "No idea" is a miss, not assistance: it earns no credit, but it must not
+  // be reported later as though a hint had been given.
+  if (blank === true) {
+    rRatings.pronunciation = 'no';
+    rRatings.meaning = 'no';
+    buildRate(true);
+    commitRecall();
+  } else {
+    buildRate(false);
+  }
+}
+
+function buildRate(locked) {
+  const groups = [
+    ['pronunciation', 'DID YOU SAY IT RIGHT?', [['yes', 'Yes'], ['no', 'No']]],
+    ['meaning', 'DID YOU KNOW THE MEANING?',
+     [['yes', 'Yes'], ['partly', 'Partly'], ['no', 'No']]],
+  ];
+  const wrap = $('r-rate');
+  wrap.innerHTML = '';
+  for (const [skill, label, opts] of groups) {
+    const g = document.createElement('div');
+    g.className = 'rate' + (locked ? ' done' : '');
+    const q = document.createElement('div');
+    q.className = 'q';
+    q.textContent = label;
+    const row = document.createElement('div');
+    row.className = 'row';
+    for (const [value, text] of opts) {
+      const b = document.createElement('button');
+      b.textContent = text;
+      if (rRatings[skill] === value) b.className = 'sel';
+      if (!locked) b.onclick = () => setRate(skill, value);
+      row.appendChild(b);
+    }
+    g.appendChild(q);
+    g.appendChild(row);
+    wrap.appendChild(g);
+  }
+}
+
+function setRate(skill, value) {
+  rRatings[skill] = value;
+  buildRate(false);
+  if (rRatings.pronunciation && rRatings.meaning) commitRecall();
+}
+
+// Writes the answer, then shows Next. The record is durable before the
+// screen is allowed to move on -- localStorage is synchronous, which is the
+// whole reason the log lives there rather than in IndexedDB.
+function commitRecall() {
+  const c = rQueue[rIdx];
+  const ev = LEARN.newEvent({
+    deviceId: LEARN.deviceId(), sessionId: rSession, itemId: c.itemId,
+    occurredAt: new Date().toISOString(), revealedAt: rRatings.revealedAt,
+    pronunciation: rRatings.pronunciation, meaning: rRatings.meaning,
+  });
+  LEARN.append(ev);
+  buildRate(true);
+  $('r-next').style.display = '';
+  $('r-next').textContent = (rIdx + 1 < rQueue.length) ? 'Next' : 'Finish';
+  const n = LEARN.pending().length;
+  $('r-status').textContent = 'saved on this phone' +
+      (n ? '  ·  ' + n + ' waiting to upload' : '');
+}
+
+function nextRecall() {
+  rIdx++;
+  if (rIdx < rQueue.length) { renderRecall(); return; }
+  flushLearn();
+  goHome();
+}
+
+/* Upload as an immutable batch. The path is derived from the event ids, so a
+   retry of the same set lands on the same path; a create without a sha fails
+   if that path already exists, which is how "never overwrite" is enforced.
+   On that failure the remote copy is read back: identical means an earlier
+   attempt succeeded and the response was simply lost, so the events are
+   acknowledged. Different means a genuine collision, and both copies are
+   left untouched for inspection. */
+async function flushLearn() {
+  const pending = LEARN.pending();
+  if (!pending.length || !TOKEN) return;
+  const path = LEARN.batchPath(LEARN.deviceId(), pending[0].occurredAt,
+                               LEARN.batchId(pending));
+  // Deterministic for a given set of events: no upload timestamp, no clock.
+  // A retry has to produce byte-identical content, otherwise the readback
+  // below can never recognise this device's own earlier upload and the
+  // events stay pending for ever. (They did, until this line lost its
+  // uploadedAt field.) Each event already carries its own occurredAt.
+  const payload = JSON.stringify(
+      { schemaVersion: LEARN.SCHEMA, deviceId: LEARN.deviceId(),
+        events: pending }, null, 1);
+  const ids = pending.map(e => e.eventId);
+  try {
+    const sha = await putFile(path, payload, null, 'phone: recall practice');
+    if (sha) { LEARN.markSynced(ids); return; }
+    const remote = await getFile(path);
+    if (remote && remote.text === payload) { LEARN.markSynced(ids); return; }
+    status('recall upload conflict — both copies kept, nothing overwritten', true);
+  } catch (e) {
+    // Stays pending. Never cleared on error, and never reported as synced.
+    status('recall practice saved on this phone — upload pending', true);
+  }
+}
+
+/* Export is a read: it takes the Classic values as arguments rather than
+   touching them, so the act of exporting can never modify what it reports. */
+function exportProgress() {
+  const bundle = LEARN.exportBundle({
+    coverage: TOKEN ? 'this device; remote history not included'
+                    : 'this device only (no token, so nothing was fetched)',
+    legacyState: state,
+    legacyPendingReviews: pendingReviews,
+  });
+  const name = 'mandarin-progress-' +
+      new Date().toISOString().slice(0, 10) + '-' + LEARN.deviceId() + '.json';
+  const blob = new Blob([JSON.stringify(bundle, null, 1)],
+                        { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = name;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(() => URL.revokeObjectURL(a.href), 30000);
+  status('exported ' + name);
 }
 
 // The single local write path: grade, cache, queue the history line, sync.
