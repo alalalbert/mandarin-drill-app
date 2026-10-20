@@ -2,9 +2,11 @@
 // offline, from the last sync), and turns Web Push messages from the Mac
 // into native notifications.
 'use strict';
-// Bumped to v2 for the recall-practice release: learn.js joined the shell,
-// and a shell that is missing one of its scripts fails to launch offline.
-const CACHE = 'mandarin-v2';
+// v3: the home screen was rebuilt (settings moved off it, tiles to one row,
+// and it can scroll). A shell cache that keeps serving the old index.html is
+// exactly how this change would appear not to have shipped -- it did that in
+// testing before the cache was cleared by hand.
+const CACHE = 'mandarin-v3';
 const SHELL = ['./', './index.html', './srs.js', './learn.js', './config.json',
                './manifest.webmanifest', './icon-180.png', './icon-512.png'];
 

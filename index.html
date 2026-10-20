@@ -21,6 +21,11 @@
        display:flex;flex-direction:column;overflow:hidden}
   .screen{display:none;flex:1;flex-direction:column;min-height:0}
   .screen.on{display:flex}
+  /* Home overflowed by 247px with no way to reach the bottom: body is
+     overflow:hidden and the screen was overflow:visible, so the last
+     button sat permanently below the fold. The drill screens are left
+     alone -- they pin the footer and the reveal with flex. */
+  #home,#settings{overflow-y:auto;-webkit-overflow-scrolling:touch}
   .kicker{font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--muted);
           text-align:center;margin-top:28px}
   h1{font-size:32px;font-weight:600;text-align:center;margin-top:10px}
@@ -28,11 +33,12 @@
   .bar{height:8px;border-radius:4px;background:var(--row2);margin:20px 0 6px;overflow:hidden}
   .bar i{display:block;height:100%;border-radius:4px;background:var(--green)}
   .barcap{font-size:12px;color:var(--dim);text-align:center;margin-bottom:12px}
-  .tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:6px 0 16px}
-  .tile{background:var(--row);border:1px solid var(--line);border-radius:12px;
-        padding:13px 6px;text-align:center}
-  .tile b{display:block;font-size:23px;font-weight:600}
-  .tile span{font-size:11px;font-weight:600;letter-spacing:.06em;color:var(--muted)}
+  .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:6px 0 14px}
+  .tile{background:var(--row);border:1px solid var(--line);border-radius:10px;
+        padding:9px 2px;text-align:center}
+  .tile b{display:block;font-size:19px;font-weight:600;line-height:1.15}
+  .tile span{display:block;font-size:9px;font-weight:600;letter-spacing:.03em;
+             color:var(--muted);margin-top:2px;line-height:1.2}
   button{appearance:none;border:1px solid var(--line);background:var(--row);
          color:var(--fg);border-radius:12px;font:inherit;width:100%;
          padding:14px 12px;margin-bottom:9px}
@@ -130,12 +136,23 @@
   </div>
   <div class="pair" id="h-learn">
     <button class="crank" onclick="startRecall()">Recall practice<small id="b-recall-sub">rate yourself</small></button>
-    <button onclick="exportProgress()">Export<small>save a copy</small></button>
   </div>
-  <button id="b-learn-off" onclick="toggleLearn()"></button>
+  <button id="b-settings" onclick="show('settings'); renderSettings()">Settings</button>
+  <div class="status" id="h-status"></div>
+</div>
+
+<div id="settings" class="screen">
+  <div class="kicker">SETTINGS</div>
+  <h1>Settings</h1>
+  <div class="sub" id="s-sub"></div>
+  <div style="height:18px"></div>
+  <button onclick="exportProgress()">Export progress<small>save a copy to this phone</small></button>
+  <button id="b-learn-off" onclick="toggleLearn(); renderSettings()"></button>
   <button id="b-token" onclick="replaceToken()">Replace token</button>
   <button id="b-notif" onclick="enablePush()" style="display:none">Enable notifications</button>
-  <div class="status" id="h-status"></div>
+  <div style="height:10px"></div>
+  <button class="primary" onclick="goHome()">Done</button>
+  <div class="status" id="s-status"></div>
 </div>
 
 <div id="drill" class="screen">
@@ -190,7 +207,7 @@ function show(id) {
   $(id).classList.add('on');
 }
 function status(msg, err) {
-  const el = $('h-status');
+  const el = $('settings').classList.contains('on') ? $('s-status') : $('h-status');
   el.textContent = msg || '';
   el.className = 'status' + (err ? ' err' : '');
 }
@@ -441,16 +458,37 @@ function renderHome() {
 
   // The token button is always available, but when syncing is actually broken
   // it should say so rather than looking like a settings item nobody needs.
-  const tb = $('b-token');
-  if (tb) {
-    const n = pendingReviews.length;
-    tb.innerHTML = authFailed
-        ? 'Replace expired token<small>syncing is off'
-          + (n ? ' · ' + n + ' card' + (n === 1 ? '' : 's') + ' waiting to upload' : '')
+  const sb = $('b-settings');
+  if (sb) {
+    const n = pendingReviews.length + LEARN.pending().length;
+    sb.innerHTML = authFailed
+        ? 'Token expired — fix in Settings<small>syncing is off'
+          + (n ? ' · ' + n + ' answer' + (n === 1 ? '' : 's') + ' waiting' : '')
           + '</small>'
-        : 'Replace token';
-    tb.className = authFailed ? 'primary' : '';
+        : 'Settings';
+    sb.className = authFailed ? 'primary' : '';
   }
+}
+
+/* The settings screen. Everything here is a control rather than a study
+   action, which is why it left the home screen -- home had grown to twelve
+   buttons and 247px past the bottom of the phone. */
+function renderSettings() {
+  const n = pendingReviews.length + LEARN.pending().length;
+  $('s-sub').textContent = authFailed
+      ? 'Syncing is off until the token is replaced.'
+      : (n ? n + ' answer' + (n === 1 ? '' : 's') + ' still to upload.'
+           : 'Everything is uploaded.');
+
+  const tb = $('b-token');
+  tb.innerHTML = authFailed
+      ? 'Replace expired token<small>paste a new one to resume syncing</small>'
+      : 'Replace token';
+  tb.className = authFailed ? 'primary' : '';
+
+  $('b-learn-off').innerHTML = LEARN.enabled()
+      ? 'Use Classic only<small>hides recall practice</small>'
+      : 'Turn recall practice back on';
 }
 function goHome() {
   show('home');
@@ -470,9 +508,6 @@ function toggleLearn() {
 function renderLearnHome() {
   const on = LEARN.enabled();
   $('h-learn').style.display = on ? '' : 'none';
-  $('b-learn-off').innerHTML = on
-      ? 'Use Classic only<small>hides recall practice</small>'
-      : 'Turn recall practice back on';
   if (!on) return;
   const proj = LEARN.projectSkills(LEARN.events(), SRS);
   const practised = Object.keys(proj).length;
