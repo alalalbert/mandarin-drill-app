@@ -168,6 +168,7 @@
   <div class="kicker" id="n-kicker">LISTEN</div>
   <div id="n-body">
     <button id="n-play" onclick="playClip()">▶</button>
+  <audio id="n-audio" preload="auto" playsinline></audio>
     <div id="n-said"></div>
     <div id="n-mean"></div>
     <div class="syl" id="n-syl"></div>
@@ -768,15 +769,50 @@ function renderListen() {
   $('n-reveal').style.display = '';
   $('n-next').style.display = 'none';
   $('n-status').textContent = '';
-  nAudio = new Audio('./audio/' + nManifest.clips[s.id]);
-  nAudio.preload = 'auto';
+  const file = nManifest.clips[s.id];
+  if (!file) {
+    nSay('No recording for this sentence.', true);
+    return;
+  }
+  nAudio = $('n-audio');
+  nAudio.src = './audio/' + file;
+  nAudio.load();
+}
+
+/* Status for the listening screen. The first version called status(), which
+   writes to the HOME screen's status line -- invisible from here, so a
+   failed clip reported nothing at all and looked like a dead button. */
+function nSay(msg, err) {
+  const el = $('n-status');
+  el.textContent = msg || '';
+  el.className = 'status' + (err ? ' err' : '');
 }
 
 function playClip() {
-  if (!nAudio) return;
+  if (!nAudio || !nAudio.src) { nSay('No recording loaded.', true); return; }
   nReplays++;
-  nAudio.currentTime = 0;
-  nAudio.play().catch(() => status('Could not play the clip.', true));
+  nSay('');
+  // Setting currentTime before anything has loaded throws on some browsers,
+  // and the throw is synchronous, so a .catch() on play() never sees it.
+  try {
+    if (nAudio.readyState > 0) nAudio.currentTime = 0;
+  } catch (e) { /* it will start from the beginning anyway */ }
+  const slow = setTimeout(() => nSay('loading…'), 350);
+  const done = () => clearTimeout(slow);
+  let p;
+  try {
+    p = nAudio.play();
+  } catch (e) {
+    done();
+    nSay('Could not play: ' + e.message, true);
+    return;
+  }
+  if (p && p.then) {
+    p.then(() => { done(); nSay(''); })
+     .catch(e => { done(); nSay('Could not play: ' + (e.message || e.name), true); });
+  } else {
+    done();
+  }
 }
 
 /* The verdict. Writes the attempt before the screen is allowed to move on. */
@@ -806,7 +842,7 @@ function checkListen() {
     revealed: nRevealed, firstAttempt: nTries === 1,
     perSyllable: r.syllables.map(x => ({ want: x.expected, got: x.got, err: x.error })),
   }));
-  $('n-status').textContent = 'saved on this phone';
+  nSay('saved on this phone');
 
   if (r.correct) {
     revealAnswer();
