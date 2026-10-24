@@ -92,6 +92,25 @@
   .rate .row button{margin-bottom:0;padding:12px 6px;font-size:15px}
   .rate button.sel{border-color:var(--blue);color:var(--blue);font-weight:600}
   .rate.done .q{color:var(--dim)}
+  /* --- listening --- */
+  #n-play{font-size:64px;line-height:1;padding:26px 0;border-color:var(--blue);
+          color:var(--blue)}
+  #n-type{width:100%;background:var(--row);color:var(--fg);
+          border:1px solid var(--line);border-radius:12px;padding:15px 14px;
+          font:17px ui-monospace,monospace;letter-spacing:.02em;margin:4px 0 9px}
+  #n-type:focus{outline:none;border-color:var(--blue)}
+  #n-body{flex:1 1 auto;display:flex;flex-direction:column;justify-content:center;
+          min-height:0;gap:10px}
+  .syl{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin:2px 0}
+  .syl span{font:15px ui-monospace,monospace;padding:5px 9px;border-radius:8px;
+            border:1px solid var(--line);background:var(--row)}
+  .syl span.ok{border-color:var(--green);color:var(--green)}
+  .syl span.no{border-color:var(--red);color:var(--red)}
+  #n-said{font-size:26px;font-weight:500;text-align:center;margin-top:4px}
+  #n-mean{font-size:15px;color:var(--muted);text-align:center}
+  #n-note{font-size:14px;line-height:1.45;color:var(--fg);text-align:center;
+          padding:0 2px}
+  #n-note.good{color:var(--green)}
   #setup a{color:var(--blue)}
 </style>
 </head>
@@ -137,8 +156,31 @@
   <div class="pair" id="h-learn">
     <button class="crank" onclick="startRecall()">Recall practice<small id="b-recall-sub">rate yourself</small></button>
   </div>
-  <button id="b-settings" onclick="show('settings'); renderSettings()">Settings</button>
+  <div class="pair">
+    <button class="crank" onclick="startListen()">Listening<small id="b-listen-sub">type what you hear</small></button>
+    <button onclick="show('settings'); renderSettings()">Settings<small id="b-settings-sub">&nbsp;</small></button>
+  </div>
+  <button id="b-settings" onclick="show('settings'); renderSettings()" style="display:none">Settings</button>
   <div class="status" id="h-status"></div>
+</div>
+
+<div id="listen" class="screen">
+  <div class="kicker" id="n-kicker">LISTEN</div>
+  <div id="n-body">
+    <button id="n-play" onclick="playClip()">▶</button>
+    <div id="n-said"></div>
+    <div id="n-mean"></div>
+    <div class="syl" id="n-syl"></div>
+    <div id="n-note"></div>
+  </div>
+  <input id="n-type" type="text" autocomplete="off" autocorrect="off"
+         autocapitalize="none" spellcheck="false"
+         placeholder="type the pinyin — ni3 hao3 or nǐ hǎo">
+  <button class="primary" id="n-check" onclick="checkListen()">Check</button>
+  <button id="n-reveal" onclick="revealListen()">Show me</button>
+  <button class="primary" id="n-next" style="display:none" onclick="nextListen()">Next</button>
+  <button id="n-done" onclick="endListen()">Finish</button>
+  <div class="status" id="n-status"></div>
 </div>
 
 <div id="settings" class="screen">
@@ -185,6 +227,7 @@
 
 <script src="./srs.js"></script>
 <script src="./learn.js"></script>
+<script src="./listen.js"></script>
 <script>
 'use strict';
 /* Progress lives in a private GitHub repo that this page and the Mac both
@@ -417,6 +460,7 @@ function summary() {
 }
 function renderHome() {
   renderLearnHome();
+  renderListenHome();
   const s = summary();
   $('h-due').textContent = s.due > 0 ? s.due + ' cards due' : 'All caught up';
   $('h-due').style.color = s.due > 0 ? '' : 'var(--green)';
@@ -470,6 +514,17 @@ function renderHome() {
   }
 }
 
+function renderListenHome() {
+  const ev = LISTEN.events();
+  const first = ev.filter(e => e.firstAttempt && !e.revealed);
+  const right = first.filter(e => e.correct).length;
+  const bits = ['level ' + LISTEN.level()];
+  if (first.length) bits.push(right + '/' + first.length + ' first time');
+  const pending = LISTEN.pending().length;
+  if (pending) bits.push(pending + ' to upload');
+  $('b-listen-sub').textContent = bits.join(' · ');
+}
+
 /* The settings screen. Everything here is a control rather than a study
    action, which is why it left the home screen -- home had grown to twelve
    buttons and 247px past the bottom of the phone. */
@@ -495,6 +550,7 @@ function goHome() {
   renderHome();
   flushReviews();
   flushLearn();
+  flushListen();
 }
 
 function toggleLearn() {
@@ -644,6 +700,184 @@ function advance() {
   awaitingNext = false;
   $('d-next').style.display = 'none';
   next();
+}
+
+/* ----------------------------- listening -------------------------------- */
+/* A clip is played, you type the pinyin back, and it is checked syllable by
+   syllable. Unlike recall practice this one IS measured -- there is a right
+   answer and the machine knows it -- so its records say assessment:
+   "automatic" where recall practice says "self".
+
+   Nothing autoplays. Every clip needs a tap, which is the whole reason this
+   is safe to have on a phone in a meeting. */
+let nQueue = [], nIdx = 0, nSession = null, nSentences = null;
+let nReplays = 0, nRevealed = false, nTries = 0, nAudio = null, nManifest = null;
+
+async function loadListen() {
+  if (nSentences) return true;
+  try {
+    const [s, m] = await Promise.all([
+      fetch('./listen-sentences.json').then(r => r.json()),
+      fetch('./audio/manifest.json').then(r => r.json()),
+    ]);
+    nSentences = s;
+    nManifest = m;
+    return true;
+  } catch (e) {
+    status('Listening material not available offline yet.', true);
+    return false;
+  }
+}
+
+async function startListen() {
+  if (!await loadListen()) return;
+  const lv = LISTEN.level();
+  const done = new Set(LISTEN.events().filter(e => e.correct).map(e => e.sentenceId));
+  // this level first, least-practised first; fall back to the level below so
+  // a session is never empty
+  const pick = (level) => nSentences.filter(s => s.level === level);
+  let pool = pick(lv).filter(s => !done.has(s.id));
+  if (pool.length < 3) pool = pool.concat(pick(lv));
+  if (pool.length < 3 && lv > 1) pool = pool.concat(pick(lv - 1));
+  if (!pool.length) { status('No listening material for that level.'); return; }
+  for (let i = pool.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+  nQueue = pool.slice(0, LISTEN.SESSION_ITEMS);
+  nSession = LEARN.uuid();
+  nIdx = 0;
+  show('listen');
+  renderListen();
+}
+
+function renderListen() {
+  const s = nQueue[nIdx];
+  nReplays = 0; nRevealed = false; nTries = 0;
+  $('n-kicker').textContent =
+      'LEVEL ' + s.level + '  ·  ' + (nIdx + 1) + ' / ' + nQueue.length;
+  // nothing about the answer is in the DOM until it has been answered
+  $('n-said').textContent = '';
+  $('n-mean').textContent = '';
+  $('n-syl').innerHTML = '';
+  $('n-note').textContent = '';
+  $('n-note').className = '';
+  $('n-type').value = '';
+  $('n-type').disabled = false;
+  $('n-check').style.display = '';
+  $('n-reveal').style.display = '';
+  $('n-next').style.display = 'none';
+  $('n-status').textContent = '';
+  nAudio = new Audio('./audio/' + nManifest.clips[s.id]);
+  nAudio.preload = 'auto';
+}
+
+function playClip() {
+  if (!nAudio) return;
+  nReplays++;
+  nAudio.currentTime = 0;
+  nAudio.play().catch(() => status('Could not play the clip.', true));
+}
+
+/* The verdict. Writes the attempt before the screen is allowed to move on. */
+function checkListen() {
+  const s = nQueue[nIdx];
+  const typed = $('n-type').value.trim();
+  if (!typed) { $('n-type').focus(); return; }
+  nTries++;
+  const r = LISTEN.evaluate(typed, s);
+
+  const box = $('n-syl');
+  box.innerHTML = '';
+  r.syllables.forEach(row => {
+    const d = document.createElement('span');
+    d.className = row.ok ? 'ok' : 'no';
+    d.textContent = row.ok ? row.expected : (row.got || '—') + ' → ' + row.expected;
+    box.appendChild(d);
+  });
+  $('n-note').textContent = LISTEN.explain(r);
+  $('n-note').className = r.correct ? 'good' : '';
+  if (navigator.vibrate) navigator.vibrate(r.correct ? 10 : [30, 40, 30]);
+
+  LISTEN.append(LISTEN.newEvent({
+    deviceId: LEARN.deviceId(), sessionId: nSession, sentenceId: s.id,
+    level: s.level, occurredAt: new Date().toISOString(), typed: typed,
+    correct: r.correct, errorType: r.errorType, replays: nReplays,
+    revealed: nRevealed, firstAttempt: nTries === 1,
+    perSyllable: r.syllables.map(x => ({ want: x.expected, got: x.got, err: x.error })),
+  }));
+  $('n-status').textContent = 'saved on this phone';
+
+  if (r.correct) {
+    revealAnswer();
+  } else {
+    // wrong answers stay open: you can listen again and try once more, and
+    // the first attempt is already recorded either way
+    $('n-type').select();
+  }
+}
+
+function revealListen() {
+  nRevealed = true;
+  const s = nQueue[nIdx];
+  LISTEN.append(LISTEN.newEvent({
+    deviceId: LEARN.deviceId(), sessionId: nSession, sentenceId: s.id,
+    level: s.level, occurredAt: new Date().toISOString(),
+    typed: $('n-type').value.trim(), correct: false, errorType: 'revealed',
+    replays: nReplays, revealed: true, firstAttempt: nTries === 0,
+  }));
+  revealAnswer();
+}
+
+function revealAnswer() {
+  const s = nQueue[nIdx];
+  $('n-said').textContent = s.zh;
+  $('n-mean').textContent = s.py + '  —  ' + s.en;
+  $('n-type').disabled = true;
+  $('n-check').style.display = 'none';
+  $('n-reveal').style.display = 'none';
+  $('n-next').style.display = '';
+  $('n-next').textContent = (nIdx + 1 < nQueue.length) ? 'Next' : 'Finish';
+}
+
+function nextListen() {
+  nIdx++;
+  if (nIdx < nQueue.length) { renderListen(); return; }
+  endListen();
+}
+
+function endListen() {
+  const before = LISTEN.level();
+  const after = LISTEN.reconsiderLevel();
+  if (after !== before) {
+    status(after > before ? 'Moved up to level ' + after
+                          : 'Back to level ' + after + ' for a bit');
+  }
+  flushListen();
+  goHome();
+}
+
+/* Same upload shape as recall practice: an immutable batch per device per
+   day, created without a sha so an existing path fails rather than being
+   overwritten, and read back to tell a lost response from a real collision. */
+async function flushListen() {
+  const pending = LISTEN.pending();
+  if (!pending.length || !TOKEN) return;
+  const path = LISTEN.batchPath(LEARN.deviceId(), pending[0].occurredAt,
+                                LISTEN.batchId(pending));
+  const payload = JSON.stringify(
+      { schemaVersion: LISTEN.SCHEMA, deviceId: LEARN.deviceId(),
+        events: pending }, null, 1);
+  const ids = pending.map(e => e.eventId);
+  try {
+    const sha = await putFile(path, payload, null, 'phone: listening');
+    if (sha) { LISTEN.markSynced(ids); return; }
+    const remote = await getFile(path);
+    if (remote && remote.text === payload) { LISTEN.markSynced(ids); return; }
+    status('listening upload conflict — both copies kept', true);
+  } catch (e) {
+    status('listening saved on this phone — upload pending', true);
+  }
 }
 
 /* --------------------------- recall practice ---------------------------- */

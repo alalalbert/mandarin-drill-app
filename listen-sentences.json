@@ -1,0 +1,503 @@
+[
+ {
+  "id": "ls-tian1-leng3",
+  "level": 1,
+  "score": 2,
+  "zh": "天冷。",
+  "py": "Tiān lěng.",
+  "en": "It's cold.",
+  "syllables": [
+   "tian1",
+   "leng3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-hen3-lei4",
+  "level": 1,
+  "score": 3,
+  "zh": "很累。",
+  "py": "Hěn lèi.",
+  "en": "(I'm) tired.",
+  "syllables": [
+   "hen3",
+   "lei4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-hen3-gui4",
+  "level": 1,
+  "score": 3,
+  "zh": "很贵。",
+  "py": "Hěn guì.",
+  "en": "It's expensive.",
+  "syllables": [
+   "hen3",
+   "gui4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-qu4",
+  "level": 1,
+  "score": 5,
+  "zh": "我去。",
+  "py": "Wǒ qù.",
+  "en": "I'll go.",
+  "syllables": [
+   "wo3",
+   "qu4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-lai2",
+  "level": 1,
+  "score": 5,
+  "zh": "他来。",
+  "py": "Tā lái.",
+  "en": "He's coming.",
+  "syllables": [
+   "ta1",
+   "lai2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-lu4-hen3-chang2",
+  "level": 2,
+  "score": 6,
+  "zh": "路很长。",
+  "py": "Lù hěn cháng.",
+  "en": "The road is long.",
+  "syllables": [
+   "lu4",
+   "hen3",
+   "chang2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-jin1-tian1-hen3-re4",
+  "level": 2,
+  "score": 7,
+  "zh": "今天很热。",
+  "py": "Jīntiān hěn rè.",
+  "en": "It's hot today.",
+  "syllables": [
+   "jin1",
+   "tian1",
+   "hen3",
+   "re4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-yao4-qu4",
+  "level": 2,
+  "score": 8,
+  "zh": "我要去。",
+  "py": "Wǒ yào qù.",
+  "en": "I want to go.",
+  "syllables": [
+   "wo3",
+   "yao4",
+   "qu4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-zai4-xue2-xiao4",
+  "level": 2,
+  "score": 8,
+  "zh": "我在学校。",
+  "py": "Wǒ zài xuéxiào.",
+  "en": "I'm at school.",
+  "syllables": [
+   "wo3",
+   "zai4",
+   "xue2",
+   "xiao4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-zhe4-ge5-hen3-gui4",
+  "level": 2,
+  "score": 8,
+  "zh": "这个很贵。",
+  "py": "Zhège hěn guì.",
+  "en": "This one is expensive.",
+  "syllables": [
+   "zhe4",
+   "ge5",
+   "hen3",
+   "gui4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-jin1-tian1-hen3-leng3",
+  "level": 3,
+  "score": 9,
+  "zh": "今天很冷。",
+  "py": "Jīntiān hěn lěng.",
+  "en": "It's cold today.",
+  "syllables": [
+   "jin1",
+   "tian1",
+   "hen3",
+   "leng3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-tian1-qi4-hen3-hao3",
+  "level": 3,
+  "score": 11,
+  "zh": "天气很好。",
+  "py": "Tiānqì hěn hǎo.",
+  "en": "The weather is good.",
+  "syllables": [
+   "tian1",
+   "qi4",
+   "hen3",
+   "hao3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-xi3-huan5-kan4-shu1",
+  "level": 3,
+  "score": 11,
+  "zh": "我喜欢看书。",
+  "py": "Wǒ xǐhuan kàn shū.",
+  "en": "I like reading.",
+  "syllables": [
+   "wo3",
+   "xi3",
+   "huan5",
+   "kan4",
+   "shu1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-lu4-bu4-yuan3",
+  "level": 3,
+  "score": 12,
+  "zh": "路不远。",
+  "py": "Lù bù yuǎn.",
+  "en": "The road isn't far.",
+  "syllables": [
+   "lu4",
+   "bu4",
+   "yuan3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-jin1-tian1-bu2-tai4-re4",
+  "level": 3,
+  "score": 12,
+  "zh": "今天不太热。",
+  "py": "Jīntiān bú tài rè.",
+  "en": "It isn't too hot today.",
+  "syllables": [
+   "jin1",
+   "tian1",
+   "bu2",
+   "tai4",
+   "re4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-xia4-wu3-qu4-yin2-hang2",
+  "level": 4,
+  "score": 13,
+  "zh": "我下午去银行。",
+  "py": "Wǒ xiàwǔ qù yínháng.",
+  "en": "I'm going to the bank this afternoon.",
+  "syllables": [
+   "wo3",
+   "xia4",
+   "wu3",
+   "qu4",
+   "yin2",
+   "hang2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-peng2-you5-hen3-cong1-ming2",
+  "level": 4,
+  "score": 13,
+  "zh": "我朋友很聪明。",
+  "py": "Wǒ péngyou hěn cōngmíng.",
+  "en": "My friend is clever.",
+  "syllables": [
+   "wo3",
+   "peng2",
+   "you5",
+   "hen3",
+   "cong1",
+   "ming2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-zhe4-ge5-fang2-jian1-hen3-da4",
+  "level": 4,
+  "score": 14,
+  "zh": "这个房间很大。",
+  "py": "Zhège fángjiān hěn dà.",
+  "en": "This room is big.",
+  "syllables": [
+   "zhe4",
+   "ge5",
+   "fang2",
+   "jian1",
+   "hen3",
+   "da4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-qing3-wen4-you2-ju2-zai4-nar3",
+  "level": 4,
+  "score": 15,
+  "zh": "请问，邮局在哪儿？",
+  "py": "Qǐngwèn, yóujú zài nǎr?",
+  "en": "Excuse me, where is the post office?",
+  "syllables": [
+   "qing3",
+   "wen4",
+   "you2",
+   "ju2",
+   "zai4",
+   "nar3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-jin1-tian1-xia4-wu3-qu4-yi1-yuan4",
+  "level": 4,
+  "score": 16,
+  "zh": "我今天下午去医院。",
+  "py": "Wǒ jīntiān xiàwǔ qù yīyuàn.",
+  "en": "I'm going to the hospital this afternoon.",
+  "syllables": [
+   "wo3",
+   "jin1",
+   "tian1",
+   "xia4",
+   "wu3",
+   "qu4",
+   "yi1",
+   "yuan4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-xi3-huan5-zai4-jia1-xiu1-xi5",
+  "level": 5,
+  "score": 17,
+  "zh": "我喜欢在家休息。",
+  "py": "Wǒ xǐhuan zài jiā xiūxi.",
+  "en": "I like resting at home.",
+  "syllables": [
+   "wo3",
+   "xi3",
+   "huan5",
+   "zai4",
+   "jia1",
+   "xiu1",
+   "xi5"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-shi4-lao3-shi1",
+  "level": 5,
+  "score": 19,
+  "zh": "他是老师。",
+  "py": "Tā shì lǎoshī.",
+  "en": "He is a teacher.",
+  "syllables": [
+   "ta1",
+   "shi4",
+   "lao3",
+   "shi1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-peng2-you5-jiu3-yue4-shi2-liu4-hao4-guo4",
+  "level": 5,
+  "score": 24,
+  "zh": "我朋友九月十六号过生日。",
+  "py": "Wǒ péngyou jiǔyuè shíliù hào guò shēngrì.",
+  "en": "My friend's birthday is the sixteenth of September.",
+  "syllables": [
+   "wo3",
+   "peng2",
+   "you5",
+   "jiu3",
+   "yue4",
+   "shi2",
+   "liu4",
+   "hao4",
+   "guo4",
+   "shengr1",
+   "i4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-you3-mei2-you3-shou3-ji1",
+  "level": 5,
+  "score": 25,
+  "zh": "你有没有手机？",
+  "py": "Nǐ yǒu méi yǒu shǒujī?",
+  "en": "Do you have a phone?",
+  "syllables": [
+   "ni3",
+   "you3",
+   "mei2",
+   "you3",
+   "shou3",
+   "ji1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-shuo1-jin1-tian1-xia4-wu3-tian1-qi4-hen3",
+  "level": 5,
+  "score": 25,
+  "zh": "他说今天下午天气很好。",
+  "py": "Tā shuō jīntiān xiàwǔ tiānqì hěn hǎo.",
+  "en": "He says the weather is good this afternoon.",
+  "syllables": [
+   "ta1",
+   "shuo1",
+   "jin1",
+   "tian1",
+   "xia4",
+   "wu3",
+   "tian1",
+   "qi4",
+   "hen3",
+   "hao3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-de5-shou3-ji1-hao4-ma3-shi4-duo1-shao5",
+  "level": 6,
+  "score": 27,
+  "zh": "你的手机号码是多少？",
+  "py": "Nǐ de shǒujī hàomǎ shì duōshao?",
+  "en": "What is your mobile number?",
+  "syllables": [
+   "ni3",
+   "de5",
+   "shou3",
+   "ji1",
+   "hao4",
+   "ma3",
+   "shi4",
+   "duo1",
+   "shao5"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-shi4-lao3-shi1-wo3-ye3-shi4",
+  "level": 6,
+  "score": 35,
+  "zh": "他是老师，我也是。",
+  "py": "Tā shì lǎoshī, wǒ yě shì.",
+  "en": "He's a teacher, and so am I.",
+  "syllables": [
+   "ta1",
+   "shi4",
+   "lao3",
+   "shi1",
+   "wo3",
+   "ye3",
+   "shi4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-jin1-tian1-xia4-wu3-wo3-he2-peng2-you5-yi4-qi",
+  "level": 6,
+  "score": 36,
+  "zh": "今天下午我和朋友一起去书店。",
+  "py": "Jīntiān xiàwǔ wǒ hé péngyou yìqǐ qù shūdiàn.",
+  "en": "This afternoon my friend and I are going to the bookshop together.",
+  "syllables": [
+   "jin1",
+   "tian1",
+   "xia4",
+   "wu3",
+   "wo3",
+   "he2",
+   "peng2",
+   "you5",
+   "yi4",
+   "qi3",
+   "qu4",
+   "shu1",
+   "dian4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-qing3-wen4-zher4-fu4-jin4-you3-mei2-you3-yin2",
+  "level": 6,
+  "score": 39,
+  "zh": "请问，这儿附近有没有银行？",
+  "py": "Qǐngwèn, zhèr fùjìn yǒu méi yǒu yínháng?",
+  "en": "Excuse me, is there a bank near here?",
+  "syllables": [
+   "qing3",
+   "wen4",
+   "zher4",
+   "fu4",
+   "jin4",
+   "you3",
+   "mei2",
+   "you3",
+   "yin2",
+   "hang2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-men5-yi4-qi3-qu4-na4-ge5-xin1-de5-gou4-wu",
+  "level": 6,
+  "score": 40,
+  "zh": "我们一起去那个新的购物中心。",
+  "py": "Wǒmen yìqǐ qù nàge xīn de gòuwù zhōngxīn.",
+  "en": "Let's go together to that new shopping centre.",
+  "syllables": [
+   "wo3",
+   "men5",
+   "yi4",
+   "qi3",
+   "qu4",
+   "na4",
+   "ge5",
+   "xin1",
+   "de5",
+   "gou4",
+   "wu4",
+   "zhong1",
+   "xin1"
+  ],
+  "accepted": []
+ }
+]

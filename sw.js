@@ -6,9 +6,10 @@
 // and it can scroll). A shell cache that keeps serving the old index.html is
 // exactly how this change would appear not to have shipped -- it did that in
 // testing before the cache was cleared by hand.
-const CACHE = 'mandarin-v3';
+const CACHE = 'mandarin-v4';
 const SHELL = ['./', './index.html', './srs.js', './learn.js', './config.json',
-               './manifest.webmanifest', './icon-180.png', './icon-512.png'];
+               './manifest.webmanifest', './icon-180.png', './icon-512.png',
+               './listen.js', './listen-sentences.json'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL))
