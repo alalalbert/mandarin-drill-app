@@ -241,10 +241,19 @@ const SRS = {
     } else if (mode === 'zh2en' || mode === 'en2zh' || mode === 'zh2py') {
       pool = cards.filter(c => c.dir === mode);
     } else if (mode === 'hardest') {
-      pool = cards.slice().sort((a, b) => {
+      // Shuffle BEFORE the sort so that cards which are equally troublesome
+      // rotate instead of always arriving in the same order. Without this
+      // "Trouble" was a fixed list: the sort is stable, so ties kept their
+      // cards.json order for ever.
+      pool = cards.filter(c => SRS.entryFor(state, c.id).lapses > 0);
+      for (let i = pool.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [pool[i], pool[j]] = [pool[j], pool[i]];
+      }
+      pool.sort((a, b) => {
         const ea = SRS.entryFor(state, a.id), eb = SRS.entryFor(state, b.id);
         return (eb.lapses - ea.lapses) || (ea.ease - eb.ease);
-      }).filter(c => SRS.entryFor(state, c.id).lapses > 0);
+      });
     } else if (mode === 'new') {
       // "New" means not yet introduced. Keying that off reps === 0 kept
       // every card you had answered but never got RIGHT in the pool
@@ -293,15 +302,26 @@ const SRS = {
           SRS.dueCards(cards, state, now, true).map(p => p[0].id));
       const head = pool.filter(c => dueIds.has(c.id));
       const tail = pool.filter(c => !dueIds.has(c.id));
-      if (mode === 'simple') {
-        // The simple-sentence ladder is meant to be climbed: two-character
-        // sentences before three, three before four. Shuffling the unseen
-        // tail would hand you a five-character sentence on day one.
-        tail.sort((a, b) => SRS.levelOf(a) - SRS.levelOf(b));
-      } else {
-        for (let i = tail.length - 1; i > 0; i--) {
+      // BOTH halves get ordered, not just the tail. Only the tail was
+      // shuffled originally, which was fine while most of the deck was not
+      // due. Once the backlog passed a thousand cards, `head` swallowed
+      // nearly every pool and `head` was plain cards.json order -- so
+      // Trouble, Simple, Phrases and Latest batch each handed back the same
+      // twenty cards on every single press. Measured: 20/20 identical on
+      // consecutive taps with nothing answered between. mode='due' is not
+      // affected and never was: dueCards sorts by due date, which moves.
+      const shuffle = arr => {
+        for (let i = arr.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
-          [tail[i], tail[j]] = [tail[j], tail[i]];
+          [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+      };
+      for (const half of [head, tail]) {
+        shuffle(half);
+        if (mode === 'simple') {
+          // The ladder is meant to be climbed, so rung order stands -- the
+          // shuffle above just rotates the cards WITHIN a rung.
+          half.sort((a, b) => SRS.levelOf(a) - SRS.levelOf(b));
         }
       }
       pool = head.concat(tail);
