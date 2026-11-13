@@ -499,5 +499,4927 @@
    "xin1"
   ],
   "accepted": []
+ },
+ {
+  "id": "ls-hen3-re4",
+  "level": 1,
+  "score": 3,
+  "zh": "很热。",
+  "py": "Hěn rè.",
+  "en": "It is hot.",
+  "syllables": [
+   "hen3",
+   "re4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-chi1-fan4",
+  "level": 1,
+  "score": 3,
+  "zh": "你吃饭。",
+  "py": "Nǐ chī fàn.",
+  "en": "You are eating a meal.",
+  "syllables": [
+   "ni3",
+   "chi1",
+   "fan4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-shuo1",
+  "level": 1,
+  "score": 3,
+  "zh": "我说。",
+  "py": "Wǒ shuō.",
+  "en": "I am speaking.",
+  "syllables": [
+   "wo3",
+   "shuo1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-hen3-man4",
+  "level": 1,
+  "score": 3,
+  "zh": "很慢。",
+  "py": "Hěn màn.",
+  "en": "It is slow.",
+  "syllables": [
+   "hen3",
+   "man4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-hen3-xin1",
+  "level": 1,
+  "score": 3,
+  "zh": "很新。",
+  "py": "Hěn xīn.",
+  "en": "It is new.",
+  "syllables": [
+   "hen3",
+   "xin1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-kan4",
+  "level": 1,
+  "score": 4,
+  "zh": "他看。",
+  "py": "Tā kàn.",
+  "en": "He is looking.",
+  "syllables": [
+   "ta1",
+   "kan4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-kan4-2",
+  "level": 1,
+  "score": 4,
+  "zh": "她看。",
+  "py": "Tā kàn.",
+  "en": "She is looking.",
+  "syllables": [
+   "ta1",
+   "kan4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-lai2-2",
+  "level": 1,
+  "score": 4,
+  "zh": "她来。",
+  "py": "Tā lái.",
+  "en": "She is coming.",
+  "syllables": [
+   "ta1",
+   "lai2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-xue2",
+  "level": 1,
+  "score": 4,
+  "zh": "你学。",
+  "py": "Nǐ xué.",
+  "en": "You are studying.",
+  "syllables": [
+   "ni3",
+   "xue2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-qu4",
+  "level": 1,
+  "score": 4,
+  "zh": "你去。",
+  "py": "Nǐ qù.",
+  "en": "You are going.",
+  "syllables": [
+   "ni3",
+   "qu4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-wen4",
+  "level": 1,
+  "score": 4,
+  "zh": "你问。",
+  "py": "Nǐ wèn.",
+  "en": "You are asking.",
+  "syllables": [
+   "ni3",
+   "wen4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-hen3-da4",
+  "level": 1,
+  "score": 4,
+  "zh": "很大。",
+  "py": "Hěn dà.",
+  "en": "It is big.",
+  "syllables": [
+   "hen3",
+   "da4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-hen3-kuai4",
+  "level": 1,
+  "score": 5,
+  "zh": "很快。",
+  "py": "Hěn kuài.",
+  "en": "It is fast.",
+  "syllables": [
+   "hen3",
+   "kuai4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-wen4",
+  "level": 1,
+  "score": 5,
+  "zh": "他问。",
+  "py": "Tā wèn.",
+  "en": "He is asking.",
+  "syllables": [
+   "ta1",
+   "wen4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-wen4-2",
+  "level": 1,
+  "score": 5,
+  "zh": "她问。",
+  "py": "Tā wèn.",
+  "en": "She is asking.",
+  "syllables": [
+   "ta1",
+   "wen4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-qu4",
+  "level": 1,
+  "score": 5,
+  "zh": "她去。",
+  "py": "Tā qù.",
+  "en": "She is going.",
+  "syllables": [
+   "ta1",
+   "qu4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-hen3-leng3",
+  "level": 1,
+  "score": 5,
+  "zh": "很冷。",
+  "py": "Hěn lěng.",
+  "en": "It is cold.",
+  "syllables": [
+   "hen3",
+   "leng3"
+  ],
+  "accepted": [
+   [
+    "hen2",
+    "leng3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-hen3-jin4",
+  "level": 1,
+  "score": 5,
+  "zh": "很近。",
+  "py": "Hěn jìn.",
+  "en": "It is close by.",
+  "syllables": [
+   "hen3",
+   "jin4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-wen4",
+  "level": 1,
+  "score": 5,
+  "zh": "我问。",
+  "py": "Wǒ wèn.",
+  "en": "I am asking.",
+  "syllables": [
+   "wo3",
+   "wen4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-lai2",
+  "level": 1,
+  "score": 4,
+  "zh": "你来。",
+  "py": "Nǐ lái.",
+  "en": "You are coming.",
+  "syllables": [
+   "ni3",
+   "lai2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-kan4-shu1",
+  "level": 1,
+  "score": 4,
+  "zh": "你看书。",
+  "py": "Nǐ kàn shū.",
+  "en": "You are reading.",
+  "syllables": [
+   "ni3",
+   "kan4",
+   "shu1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-xue2",
+  "level": 1,
+  "score": 4,
+  "zh": "她学。",
+  "py": "Tā xué.",
+  "en": "She is studying.",
+  "syllables": [
+   "ta1",
+   "xue2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-kan4",
+  "level": 1,
+  "score": 4,
+  "zh": "我看。",
+  "py": "Wǒ kàn.",
+  "en": "I am looking.",
+  "syllables": [
+   "wo3",
+   "kan4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-zou3",
+  "level": 1,
+  "score": 4,
+  "zh": "她走。",
+  "py": "Tā zǒu.",
+  "en": "She is leaving.",
+  "syllables": [
+   "ta1",
+   "zou3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-xue2-2",
+  "level": 1,
+  "score": 4,
+  "zh": "他学。",
+  "py": "Tā xué.",
+  "en": "He is studying.",
+  "syllables": [
+   "ta1",
+   "xue2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-hen3-xiao3",
+  "level": 1,
+  "score": 5,
+  "zh": "很小。",
+  "py": "Hěn xiǎo.",
+  "en": "It is small.",
+  "syllables": [
+   "hen3",
+   "xiao3"
+  ],
+  "accepted": [
+   [
+    "hen2",
+    "xiao3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-ming2-tian1-hen3-re4",
+  "level": 1,
+  "score": 5,
+  "zh": "明天很热。",
+  "py": "Míngtiān hěn rè.",
+  "en": "It will be hot tomorrow.",
+  "syllables": [
+   "ming2",
+   "tian1",
+   "hen3",
+   "re4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-zou3",
+  "level": 1,
+  "score": 5,
+  "zh": "你走。",
+  "py": "Nǐ zǒu.",
+  "en": "You are leaving.",
+  "syllables": [
+   "ni3",
+   "zou3"
+  ],
+  "accepted": [
+   [
+    "ni2",
+    "zou3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-wo3-xue2",
+  "level": 1,
+  "score": 5,
+  "zh": "我学。",
+  "py": "Wǒ xué.",
+  "en": "I am studying.",
+  "syllables": [
+   "wo3",
+   "xue2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-kan4-shu1",
+  "level": 1,
+  "score": 5,
+  "zh": "他看书。",
+  "py": "Tā kàn shū.",
+  "en": "He is reading.",
+  "syllables": [
+   "ta1",
+   "kan4",
+   "shu1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-shuo1",
+  "level": 1,
+  "score": 5,
+  "zh": "他说。",
+  "py": "Tā shuō.",
+  "en": "He is speaking.",
+  "syllables": [
+   "ta1",
+   "shuo1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-shuo1-2",
+  "level": 1,
+  "score": 5,
+  "zh": "她说。",
+  "py": "Tā shuō.",
+  "en": "She is speaking.",
+  "syllables": [
+   "ta1",
+   "shuo1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-kan4-shu1-2",
+  "level": 1,
+  "score": 5,
+  "zh": "她看书。",
+  "py": "Tā kàn shū.",
+  "en": "She is reading.",
+  "syllables": [
+   "ta1",
+   "kan4",
+   "shu1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-lai2",
+  "level": 1,
+  "score": 5,
+  "zh": "我来。",
+  "py": "Wǒ lái.",
+  "en": "I am coming.",
+  "syllables": [
+   "wo3",
+   "lai2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-hen3-cong1-ming2",
+  "level": 2,
+  "score": 6,
+  "zh": "他很聪明。",
+  "py": "Tā hěn cōngmíng.",
+  "en": "He is clever.",
+  "syllables": [
+   "ta1",
+   "hen3",
+   "cong1",
+   "ming2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-men5-zou3",
+  "level": 2,
+  "score": 6,
+  "zh": "我们走。",
+  "py": "Wǒmen zǒu.",
+  "en": "We are leaving.",
+  "syllables": [
+   "wo3",
+   "men5",
+   "zou3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-hen3-lei4",
+  "level": 2,
+  "score": 6,
+  "zh": "她很累。",
+  "py": "Tā hěn lèi.",
+  "en": "She is tired.",
+  "syllables": [
+   "ta1",
+   "hen3",
+   "lei4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-chi1-fan4",
+  "level": 2,
+  "score": 6,
+  "zh": "他吃饭。",
+  "py": "Tā chī fàn.",
+  "en": "He is eating a meal.",
+  "syllables": [
+   "ta1",
+   "chi1",
+   "fan4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-chi1-zhong1-can1",
+  "level": 2,
+  "score": 6,
+  "zh": "你吃中餐。",
+  "py": "Nǐ chī zhōngcān.",
+  "en": "You are eating Chinese food.",
+  "syllables": [
+   "ni3",
+   "chi1",
+   "zhong1",
+   "can1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-xiu1-xi5",
+  "level": 2,
+  "score": 6,
+  "zh": "我休息。",
+  "py": "Wǒ xiūxi.",
+  "en": "I am resting.",
+  "syllables": [
+   "wo3",
+   "xiu1",
+   "xi5"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-hen3-nan2",
+  "level": 2,
+  "score": 6,
+  "zh": "很难。",
+  "py": "Hěn nán.",
+  "en": "It is difficult.",
+  "syllables": [
+   "hen3",
+   "nan2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-chi1-yu2",
+  "level": 2,
+  "score": 6,
+  "zh": "你吃鱼。",
+  "py": "Nǐ chī yú.",
+  "en": "You are eating fish.",
+  "syllables": [
+   "ni3",
+   "chi1",
+   "yu2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-mai3",
+  "level": 2,
+  "score": 6,
+  "zh": "她买。",
+  "py": "Tā mǎi.",
+  "en": "She is buying.",
+  "syllables": [
+   "ta1",
+   "mai3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-mai4-shu1",
+  "level": 2,
+  "score": 6,
+  "zh": "你卖书。",
+  "py": "Nǐ mài shū.",
+  "en": "You sell books.",
+  "syllables": [
+   "ni3",
+   "mai4",
+   "shu1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-hen3-lei4-2",
+  "level": 2,
+  "score": 6,
+  "zh": "他很累。",
+  "py": "Tā hěn lèi.",
+  "en": "He is tired.",
+  "syllables": [
+   "ta1",
+   "hen3",
+   "lei4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-hen3-yuan3",
+  "level": 2,
+  "score": 6,
+  "zh": "很远。",
+  "py": "Hěn yuǎn.",
+  "en": "It is far away.",
+  "syllables": [
+   "hen3",
+   "yuan3"
+  ],
+  "accepted": [
+   [
+    "hen2",
+    "yuan3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-wo3-men5-lai2",
+  "level": 2,
+  "score": 6,
+  "zh": "我们来。",
+  "py": "Wǒmen lái.",
+  "en": "We are coming.",
+  "syllables": [
+   "wo3",
+   "men5",
+   "lai2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-hen3-cong1-ming2-2",
+  "level": 2,
+  "score": 6,
+  "zh": "她很聪明。",
+  "py": "Tā hěn cōngmíng.",
+  "en": "She is clever.",
+  "syllables": [
+   "ta1",
+   "hen3",
+   "cong1",
+   "ming2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-zai4-gong1-yu4",
+  "level": 2,
+  "score": 7,
+  "zh": "你在公寓。",
+  "py": "Nǐ zài gōngyù.",
+  "en": "You are in the flat.",
+  "syllables": [
+   "ni3",
+   "zai4",
+   "gong1",
+   "yu4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-men5-kan4-shu1",
+  "level": 2,
+  "score": 7,
+  "zh": "我们看书。",
+  "py": "Wǒmen kàn shū.",
+  "en": "We are reading.",
+  "syllables": [
+   "wo3",
+   "men5",
+   "kan4",
+   "shu1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-zai4-gong1-yuan2",
+  "level": 2,
+  "score": 7,
+  "zh": "你在公园。",
+  "py": "Nǐ zài gōngyuán.",
+  "en": "You are at the park.",
+  "syllables": [
+   "ni3",
+   "zai4",
+   "gong1",
+   "yuan2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-zai4-xue2-xiao4",
+  "level": 2,
+  "score": 7,
+  "zh": "你在学校。",
+  "py": "Nǐ zài xuéxiào.",
+  "en": "You are at the school.",
+  "syllables": [
+   "ni3",
+   "zai4",
+   "xue2",
+   "xiao4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-men5-chi1-fan4",
+  "level": 2,
+  "score": 7,
+  "zh": "我们吃饭。",
+  "py": "Wǒmen chī fàn.",
+  "en": "We are eating a meal.",
+  "syllables": [
+   "wo3",
+   "men5",
+   "chi1",
+   "fan4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-zai4-shu1-dian4",
+  "level": 2,
+  "score": 8,
+  "zh": "你在书店。",
+  "py": "Nǐ zài shūdiàn.",
+  "en": "You are at the bookshop.",
+  "syllables": [
+   "ni3",
+   "zai4",
+   "shu1",
+   "dian4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-men5-hen3-lei4",
+  "level": 2,
+  "score": 8,
+  "zh": "我们很累。",
+  "py": "Wǒmen hěn lèi.",
+  "en": "We are tired.",
+  "syllables": [
+   "wo3",
+   "men5",
+   "hen3",
+   "lei4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-men5-zou3",
+  "level": 2,
+  "score": 8,
+  "zh": "他们走。",
+  "py": "Tāmen zǒu.",
+  "en": "They are leaving.",
+  "syllables": [
+   "ta1",
+   "men5",
+   "zou3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-zai4-yin2-hang2",
+  "level": 2,
+  "score": 8,
+  "zh": "你在银行。",
+  "py": "Nǐ zài yínháng.",
+  "en": "You are at the bank.",
+  "syllables": [
+   "ni3",
+   "zai4",
+   "yin2",
+   "hang2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-zai4-can1-ting1",
+  "level": 2,
+  "score": 8,
+  "zh": "你在餐厅。",
+  "py": "Nǐ zài cāntīng.",
+  "en": "You are in the dining room.",
+  "syllables": [
+   "ni3",
+   "zai4",
+   "can1",
+   "ting1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-men5-lai2",
+  "level": 2,
+  "score": 8,
+  "zh": "他们来。",
+  "py": "Tāmen lái.",
+  "en": "They are coming.",
+  "syllables": [
+   "ta1",
+   "men5",
+   "lai2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-men5-hen3-cong1-ming2",
+  "level": 2,
+  "score": 8,
+  "zh": "我们很聪明。",
+  "py": "Wǒmen hěn cōngmíng.",
+  "en": "We are clever.",
+  "syllables": [
+   "wo3",
+   "men5",
+   "hen3",
+   "cong1",
+   "ming2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-zhe4-ben3-shu1-hen3-gui4",
+  "level": 2,
+  "score": 8,
+  "zh": "这本书很贵。",
+  "py": "Zhè běn shū hěn guì.",
+  "en": "This book is expensive.",
+  "syllables": [
+   "zhe4",
+   "ben3",
+   "shu1",
+   "hen3",
+   "gui4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-zhe4-ben3-shu1-hen3-xin1",
+  "level": 2,
+  "score": 8,
+  "zh": "这本书很新。",
+  "py": "Zhè běn shū hěn xīn.",
+  "en": "This book is new.",
+  "syllables": [
+   "zhe4",
+   "ben3",
+   "shu1",
+   "hen3",
+   "xin1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-mai3-2",
+  "level": 2,
+  "score": 6,
+  "zh": "他买。",
+  "py": "Tā mǎi.",
+  "en": "He is buying.",
+  "syllables": [
+   "ta1",
+   "mai3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-chi1-fan4-2",
+  "level": 2,
+  "score": 6,
+  "zh": "她吃饭。",
+  "py": "Tā chī fàn.",
+  "en": "She is eating a meal.",
+  "syllables": [
+   "ta1",
+   "chi1",
+   "fan4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-hen3-lei4",
+  "level": 2,
+  "score": 7,
+  "zh": "你很累。",
+  "py": "Nǐ hěn lèi.",
+  "en": "You are tired.",
+  "syllables": [
+   "ni3",
+   "hen3",
+   "lei4"
+  ],
+  "accepted": [
+   [
+    "ni2",
+    "hen3",
+    "lei4"
+   ]
+  ]
+ },
+ {
+  "id": "ls-ni3-chang4-ge1",
+  "level": 2,
+  "score": 7,
+  "zh": "你唱歌。",
+  "py": "Nǐ chànggē.",
+  "en": "You sing.",
+  "syllables": [
+   "ni3",
+   "chang4",
+   "ge1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-chuan1-mao2-yi1",
+  "level": 2,
+  "score": 7,
+  "zh": "你穿毛衣。",
+  "py": "Nǐ chuān máoyī.",
+  "en": "You are wearing a sweater.",
+  "syllables": [
+   "ni3",
+   "chuan1",
+   "mao2",
+   "yi1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-mai4-shu1",
+  "level": 2,
+  "score": 7,
+  "zh": "我卖书。",
+  "py": "Wǒ mài shū.",
+  "en": "I sell books.",
+  "syllables": [
+   "wo3",
+   "mai4",
+   "shu1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ming2-tian1-hen3-leng3",
+  "level": 2,
+  "score": 7,
+  "zh": "明天很冷。",
+  "py": "Míngtiān hěn lěng.",
+  "en": "It will be cold tomorrow.",
+  "syllables": [
+   "ming2",
+   "tian1",
+   "hen3",
+   "leng3"
+  ],
+  "accepted": [
+   [
+    "ming2",
+    "tian1",
+    "hen2",
+    "leng3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-gong1-yu4-hen3-xin1",
+  "level": 2,
+  "score": 7,
+  "zh": "公寓很新。",
+  "py": "Gōngyù hěn xīn.",
+  "en": "The flat is new.",
+  "syllables": [
+   "gong1",
+   "yu4",
+   "hen3",
+   "xin1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-mai3-shu1",
+  "level": 2,
+  "score": 7,
+  "zh": "她买书。",
+  "py": "Tā mǎi shū.",
+  "en": "She is buying a book.",
+  "syllables": [
+   "ta1",
+   "mai3",
+   "shu1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-can1-ting1-hen3-xin1",
+  "level": 2,
+  "score": 7,
+  "zh": "餐厅很新。",
+  "py": "Cāntīng hěn xīn.",
+  "en": "The dining room is new.",
+  "syllables": [
+   "can1",
+   "ting1",
+   "hen3",
+   "xin1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-hen3-mang2",
+  "level": 2,
+  "score": 7,
+  "zh": "她很忙。",
+  "py": "Tā hěn máng.",
+  "en": "She is busy.",
+  "syllables": [
+   "ta1",
+   "hen3",
+   "mang2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-hen3-pian2-yi5",
+  "level": 2,
+  "score": 7,
+  "zh": "很便宜。",
+  "py": "Hěn piányi.",
+  "en": "It is cheap.",
+  "syllables": [
+   "hen3",
+   "pian2",
+   "yi5"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-zai4-gong1-yuan2",
+  "level": 2,
+  "score": 8,
+  "zh": "她在公园。",
+  "py": "Tā zài gōngyuán.",
+  "en": "She is at the park.",
+  "syllables": [
+   "ta1",
+   "zai4",
+   "gong1",
+   "yuan2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-zai4-gong1-yuan2-2",
+  "level": 2,
+  "score": 8,
+  "zh": "他在公园。",
+  "py": "Tā zài gōngyuán.",
+  "en": "He is at the park.",
+  "syllables": [
+   "ta1",
+   "zai4",
+   "gong1",
+   "yuan2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-zai4-xue2-xiao4",
+  "level": 2,
+  "score": 8,
+  "zh": "她在学校。",
+  "py": "Tā zài xuéxiào.",
+  "en": "She is at the school.",
+  "syllables": [
+   "ta1",
+   "zai4",
+   "xue2",
+   "xiao4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-zai4-gong1-yu4",
+  "level": 2,
+  "score": 8,
+  "zh": "她在公寓。",
+  "py": "Tā zài gōngyù.",
+  "en": "She is in the flat.",
+  "syllables": [
+   "ta1",
+   "zai4",
+   "gong1",
+   "yu4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-zai4-yi1-yuan4",
+  "level": 2,
+  "score": 8,
+  "zh": "你在医院。",
+  "py": "Nǐ zài yīyuàn.",
+  "en": "You are at the hospital.",
+  "syllables": [
+   "ni3",
+   "zai4",
+   "yi1",
+   "yuan4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-zai4-gong1-yu4-2",
+  "level": 2,
+  "score": 8,
+  "zh": "他在公寓。",
+  "py": "Tā zài gōngyù.",
+  "en": "He is in the flat.",
+  "syllables": [
+   "ta1",
+   "zai4",
+   "gong1",
+   "yu4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-mai4-shu1",
+  "level": 2,
+  "score": 7,
+  "zh": "他卖书。",
+  "py": "Tā mài shū.",
+  "en": "He sells books.",
+  "syllables": [
+   "ta1",
+   "mai4",
+   "shu1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-chuan1-xie2",
+  "level": 2,
+  "score": 7,
+  "zh": "你穿鞋。",
+  "py": "Nǐ chuān xié.",
+  "en": "You are wearing shoes.",
+  "syllables": [
+   "ni3",
+   "chuan1",
+   "xie2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-hen3-cong1-ming2",
+  "level": 2,
+  "score": 7,
+  "zh": "你很聪明。",
+  "py": "Nǐ hěn cōngmíng.",
+  "en": "You are clever.",
+  "syllables": [
+   "ni3",
+   "hen3",
+   "cong1",
+   "ming2"
+  ],
+  "accepted": [
+   [
+    "ni2",
+    "hen3",
+    "cong1",
+    "ming2"
+   ]
+  ]
+ },
+ {
+  "id": "ls-ta1-mai4-shu1-2",
+  "level": 2,
+  "score": 7,
+  "zh": "她卖书。",
+  "py": "Tā mài shū.",
+  "en": "She sells books.",
+  "syllables": [
+   "ta1",
+   "mai4",
+   "shu1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-fan4-dian4-hen3-xin1",
+  "level": 3,
+  "score": 9,
+  "zh": "饭店很新。",
+  "py": "Fàndiàn hěn xīn.",
+  "en": "The restaurant is new.",
+  "syllables": [
+   "fan4",
+   "dian4",
+   "hen3",
+   "xin1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-zai4-fang4-uan3",
+  "level": 3,
+  "score": 9,
+  "zh": "你在饭馆。",
+  "py": "Nǐ zài fànguǎn.",
+  "en": "You are at the eatery.",
+  "syllables": [
+   "ni3",
+   "zai4",
+   "fang4",
+   "uan3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-shui4-jiao4",
+  "level": 3,
+  "score": 9,
+  "zh": "我睡觉。",
+  "py": "Wǒ shuìjiào.",
+  "en": "I am sleeping.",
+  "syllables": [
+   "wo3",
+   "shui4",
+   "jiao4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-zai4-shu1-dian4",
+  "level": 3,
+  "score": 9,
+  "zh": "我在书店。",
+  "py": "Wǒ zài shūdiàn.",
+  "en": "I am at the bookshop.",
+  "syllables": [
+   "wo3",
+   "zai4",
+   "shu1",
+   "dian4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-zai4-can1-ting1",
+  "level": 3,
+  "score": 9,
+  "zh": "她在餐厅。",
+  "py": "Tā zài cāntīng.",
+  "en": "She is in the dining room.",
+  "syllables": [
+   "ta1",
+   "zai4",
+   "can1",
+   "ting1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-zai4-yi1-yuan4",
+  "level": 3,
+  "score": 9,
+  "zh": "他在医院。",
+  "py": "Tā zài yīyuàn.",
+  "en": "He is at the hospital.",
+  "syllables": [
+   "ta1",
+   "zai4",
+   "yi1",
+   "yuan4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-mai3-dong1-xi5",
+  "level": 3,
+  "score": 9,
+  "zh": "她买东西。",
+  "py": "Tā mǎi dōngxi.",
+  "en": "She is buying things.",
+  "syllables": [
+   "ta1",
+   "mai3",
+   "dong1",
+   "xi5"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-men5-xiu1-xi5",
+  "level": 3,
+  "score": 9,
+  "zh": "我们休息。",
+  "py": "Wǒmen xiūxi.",
+  "en": "We are resting.",
+  "syllables": [
+   "wo3",
+   "men5",
+   "xiu1",
+   "xi5"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-mai4-xie2",
+  "level": 3,
+  "score": 9,
+  "zh": "我卖鞋。",
+  "py": "Wǒ mài xié.",
+  "en": "I sell shoes.",
+  "syllables": [
+   "wo3",
+   "mai4",
+   "xie2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-mai4-mao2-yi1",
+  "level": 3,
+  "score": 9,
+  "zh": "他卖毛衣。",
+  "py": "Tā mài máoyī.",
+  "en": "He sells sweaters.",
+  "syllables": [
+   "ta1",
+   "mai4",
+   "mao2",
+   "yi1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-zai4-can1-ting1",
+  "level": 3,
+  "score": 9,
+  "zh": "我在餐厅。",
+  "py": "Wǒ zài cāntīng.",
+  "en": "I am in the dining room.",
+  "syllables": [
+   "wo3",
+   "zai4",
+   "can1",
+   "ting1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-zai4-yin2-hang2",
+  "level": 3,
+  "score": 9,
+  "zh": "他在银行。",
+  "py": "Tā zài yínháng.",
+  "en": "He is at the bank.",
+  "syllables": [
+   "ta1",
+   "zai4",
+   "yin2",
+   "hang2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-yao4-qu4-chi1-fan4",
+  "level": 3,
+  "score": 9,
+  "zh": "你要去吃饭。",
+  "py": "Nǐ yào qù chīfàn.",
+  "en": "You are going to go and eat.",
+  "syllables": [
+   "ni3",
+   "yao4",
+   "qu4",
+   "chi1",
+   "fan4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-mai3-shu1",
+  "level": 3,
+  "score": 9,
+  "zh": "我买书。",
+  "py": "Wǒ mǎi shū.",
+  "en": "I am buying a book.",
+  "syllables": [
+   "wo3",
+   "mai3",
+   "shu1"
+  ],
+  "accepted": [
+   [
+    "wo2",
+    "mai3",
+    "shu1"
+   ]
+  ]
+ },
+ {
+  "id": "ls-gong1-yuan2-zai4-nar3",
+  "level": 3,
+  "score": 9,
+  "zh": "公园在哪儿？",
+  "py": "Gōngyuán zài nǎr?",
+  "en": "Where is the park?",
+  "syllables": [
+   "gong1",
+   "yuan2",
+   "zai4",
+   "nar3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-yi1-yuan4-hen3-da4",
+  "level": 3,
+  "score": 9,
+  "zh": "医院很大。",
+  "py": "Yīyuàn hěn dà.",
+  "en": "The hospital is big.",
+  "syllables": [
+   "yi1",
+   "yuan4",
+   "hen3",
+   "da4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-chi1-yu2",
+  "level": 3,
+  "score": 9,
+  "zh": "她吃鱼。",
+  "py": "Tā chī yú.",
+  "en": "She is eating fish.",
+  "syllables": [
+   "ta1",
+   "chi1",
+   "yu2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-gong1-yu4-hen3-jin4",
+  "level": 3,
+  "score": 9,
+  "zh": "公寓很近。",
+  "py": "Gōngyù hěn jìn.",
+  "en": "The flat is close by.",
+  "syllables": [
+   "gong1",
+   "yu4",
+   "hen3",
+   "jin4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-gong1-yuan2-hen3-da4",
+  "level": 3,
+  "score": 9,
+  "zh": "公园很大。",
+  "py": "Gōngyuán hěn dà.",
+  "en": "The park is big.",
+  "syllables": [
+   "gong1",
+   "yuan2",
+   "hen3",
+   "da4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-xue2-xiao4-hen3-xiao3",
+  "level": 3,
+  "score": 9,
+  "zh": "学校很小。",
+  "py": "Xuéxiào hěn xiǎo.",
+  "en": "The school is small.",
+  "syllables": [
+   "xue2",
+   "xiao4",
+   "hen3",
+   "xiao3"
+  ],
+  "accepted": [
+   [
+    "xue2",
+    "xiao4",
+    "hen2",
+    "xiao3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-ta1-men5-chi1-fan4",
+  "level": 3,
+  "score": 9,
+  "zh": "他们吃饭。",
+  "py": "Tāmen chī fàn.",
+  "en": "They are eating a meal.",
+  "syllables": [
+   "ta1",
+   "men5",
+   "chi1",
+   "fan4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-yin2-hang2-hen3-xin1",
+  "level": 3,
+  "score": 9,
+  "zh": "银行很新。",
+  "py": "Yínháng hěn xīn.",
+  "en": "The bank is new.",
+  "syllables": [
+   "yin2",
+   "hang2",
+   "hen3",
+   "xin1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-zhou1-mo4-qu4-xue2-xiao4",
+  "level": 3,
+  "score": 9,
+  "zh": "你周末去学校。",
+  "py": "Nǐ zhōumò qù xuéxiào.",
+  "en": "You go to the school at the weekend.",
+  "syllables": [
+   "ni3",
+   "zhou1",
+   "mo4",
+   "qu4",
+   "xue2",
+   "xiao4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-gong1-yu4-hen3-xiao3",
+  "level": 3,
+  "score": 9,
+  "zh": "公寓很小。",
+  "py": "Gōngyù hěn xiǎo.",
+  "en": "The flat is small.",
+  "syllables": [
+   "gong1",
+   "yu4",
+   "hen3",
+   "xiao3"
+  ],
+  "accepted": [
+   [
+    "gong1",
+    "yu4",
+    "hen2",
+    "xiao3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-wo3-men5-mai4-shu1",
+  "level": 3,
+  "score": 9,
+  "zh": "我们卖书。",
+  "py": "Wǒmen mài shū.",
+  "en": "We sell books.",
+  "syllables": [
+   "wo3",
+   "men5",
+   "mai4",
+   "shu1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-men5-hen3-mang2",
+  "level": 3,
+  "score": 9,
+  "zh": "我们很忙。",
+  "py": "Wǒmen hěn máng.",
+  "en": "We are busy.",
+  "syllables": [
+   "wo3",
+   "men5",
+   "hen3",
+   "mang2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-zhe4-ben3-shu1-hen3-da4",
+  "level": 3,
+  "score": 9,
+  "zh": "这本书很大。",
+  "py": "Zhè běn shū hěn dà.",
+  "en": "This book is big.",
+  "syllables": [
+   "zhe4",
+   "ben3",
+   "shu1",
+   "hen3",
+   "da4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-men5-kan4-shu1",
+  "level": 3,
+  "score": 9,
+  "zh": "他们看书。",
+  "py": "Tāmen kàn shū.",
+  "en": "They are reading.",
+  "syllables": [
+   "ta1",
+   "men5",
+   "kan4",
+   "shu1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-men5-mai3-shu1",
+  "level": 3,
+  "score": 9,
+  "zh": "我们买书。",
+  "py": "Wǒmen mǎi shū.",
+  "en": "We are buying a book.",
+  "syllables": [
+   "wo3",
+   "men5",
+   "mai3",
+   "shu1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-zhou1-mo4-qu4-gong1-yuan2",
+  "level": 3,
+  "score": 9,
+  "zh": "你周末去公园。",
+  "py": "Nǐ zhōumò qù gōngyuán.",
+  "en": "You go to the park at the weekend.",
+  "syllables": [
+   "ni3",
+   "zhou1",
+   "mo4",
+   "qu4",
+   "gong1",
+   "yuan2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-xue2-xiao4-hen3-jin4",
+  "level": 3,
+  "score": 9,
+  "zh": "学校很近。",
+  "py": "Xuéxiào hěn jìn.",
+  "en": "The school is close by.",
+  "syllables": [
+   "xue2",
+   "xiao4",
+   "hen3",
+   "jin4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-can1-ting1-hen3-jin4",
+  "level": 3,
+  "score": 9,
+  "zh": "餐厅很近。",
+  "py": "Cāntīng hěn jìn.",
+  "en": "The dining room is close by.",
+  "syllables": [
+   "can1",
+   "ting1",
+   "hen3",
+   "jin4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-shu1-dian4-hen3-jin4",
+  "level": 3,
+  "score": 10,
+  "zh": "书店很近。",
+  "py": "Shūdiàn hěn jìn.",
+  "en": "The bookshop is close by.",
+  "syllables": [
+   "shu1",
+   "dian4",
+   "hen3",
+   "jin4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-zhe4-ben3-shu1-hen3-xiao3",
+  "level": 3,
+  "score": 10,
+  "zh": "这本书很小。",
+  "py": "Zhè běn shū hěn xiǎo.",
+  "en": "This book is small.",
+  "syllables": [
+   "zhe4",
+   "ben3",
+   "shu1",
+   "hen3",
+   "xiao3"
+  ],
+  "accepted": [
+   [
+    "zhe4",
+    "ben3",
+    "shu1",
+    "hen2",
+    "xiao3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-ta1-ming2-tian1-qu4-xue2-xiao4",
+  "level": 3,
+  "score": 10,
+  "zh": "他明天去学校。",
+  "py": "Tā míngtiān qù xuéxiào.",
+  "en": "He is going to the school tomorrow.",
+  "syllables": [
+   "ta1",
+   "ming2",
+   "tian1",
+   "qu4",
+   "xue2",
+   "xiao4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-mei3-tian1-qu4-xue2-xiao4",
+  "level": 3,
+  "score": 10,
+  "zh": "她每天去学校。",
+  "py": "Tā měitiān qù xuéxiào.",
+  "en": "She goes to the school every day.",
+  "syllables": [
+   "ta1",
+   "mei3",
+   "tian1",
+   "qu4",
+   "xue2",
+   "xiao4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-gong1-yu4-zai4-nar3",
+  "level": 3,
+  "score": 10,
+  "zh": "公寓在哪儿？",
+  "py": "Gōngyù zài nǎr?",
+  "en": "Where is the flat?",
+  "syllables": [
+   "gong1",
+   "yu4",
+   "zai4",
+   "nar3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-ming2-tian1-qu4-xue2-xiao4-2",
+  "level": 3,
+  "score": 10,
+  "zh": "她明天去学校。",
+  "py": "Tā míngtiān qù xuéxiào.",
+  "en": "She is going to the school tomorrow.",
+  "syllables": [
+   "ta1",
+   "ming2",
+   "tian1",
+   "qu4",
+   "xue2",
+   "xiao4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-zhou1-mo4-qu4-yin2-hang2",
+  "level": 3,
+  "score": 10,
+  "zh": "你周末去银行。",
+  "py": "Nǐ zhōumò qù yínháng.",
+  "en": "You go to the bank at the weekend.",
+  "syllables": [
+   "ni3",
+   "zhou1",
+   "mo4",
+   "qu4",
+   "yin2",
+   "hang2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-men5-hen3-cong1-ming2",
+  "level": 3,
+  "score": 10,
+  "zh": "他们很聪明。",
+  "py": "Tāmen hěn cōngmíng.",
+  "en": "They are clever.",
+  "syllables": [
+   "ta1",
+   "men5",
+   "hen3",
+   "cong1",
+   "ming2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-yao4-qu4-kan4-shu1",
+  "level": 3,
+  "score": 10,
+  "zh": "你要去看书。",
+  "py": "Nǐ yào qù kàn shū.",
+  "en": "You are going to go and read.",
+  "syllables": [
+   "ni3",
+   "yao4",
+   "qu4",
+   "kan4",
+   "shu1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-men5-chang4-ge1",
+  "level": 3,
+  "score": 10,
+  "zh": "我们唱歌。",
+  "py": "Wǒmen chànggē.",
+  "en": "We sing.",
+  "syllables": [
+   "wo3",
+   "men5",
+   "chang4",
+   "ge1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-gong1-yuan2-hen3-jin4",
+  "level": 3,
+  "score": 10,
+  "zh": "公园很近。",
+  "py": "Gōngyuán hěn jìn.",
+  "en": "The park is close by.",
+  "syllables": [
+   "gong1",
+   "yuan2",
+   "hen3",
+   "jin4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-men5-hen3-lei4",
+  "level": 3,
+  "score": 10,
+  "zh": "他们很累。",
+  "py": "Tāmen hěn lèi.",
+  "en": "They are tired.",
+  "syllables": [
+   "ta1",
+   "men5",
+   "hen3",
+   "lei4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-yao4-qu4-chi1-fan4",
+  "level": 3,
+  "score": 10,
+  "zh": "她要去吃饭。",
+  "py": "Tā yào qù chīfàn.",
+  "en": "She is going to go and eat.",
+  "syllables": [
+   "ta1",
+   "yao4",
+   "qu4",
+   "chi1",
+   "fan4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-yao4-qu4-chi1-fan4-2",
+  "level": 3,
+  "score": 10,
+  "zh": "他要去吃饭。",
+  "py": "Tā yào qù chīfàn.",
+  "en": "He is going to go and eat.",
+  "syllables": [
+   "ta1",
+   "yao4",
+   "qu4",
+   "chi1",
+   "fan4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-xue2-xiao4-zai4-nar3",
+  "level": 3,
+  "score": 10,
+  "zh": "学校在哪儿？",
+  "py": "Xuéxiào zài nǎr?",
+  "en": "Where is the school?",
+  "syllables": [
+   "xue2",
+   "xiao4",
+   "zai4",
+   "nar3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-can1-ting1-zai4-nar3",
+  "level": 3,
+  "score": 10,
+  "zh": "餐厅在哪儿？",
+  "py": "Cāntīng zài nǎr?",
+  "en": "Where is the dining room?",
+  "syllables": [
+   "can1",
+   "ting1",
+   "zai4",
+   "nar3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-hua1-yuan2-zai4-nar3",
+  "level": 3,
+  "score": 10,
+  "zh": "花园在哪儿？",
+  "py": "Huāyuán zài nǎr?",
+  "en": "Where is the garden?",
+  "syllables": [
+   "hua1",
+   "yuan2",
+   "zai4",
+   "nar3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-yao4-qu4-chi1-fan4",
+  "level": 3,
+  "score": 10,
+  "zh": "我要去吃饭。",
+  "py": "Wǒ yào qù chīfàn.",
+  "en": "I am going to go and eat.",
+  "syllables": [
+   "wo3",
+   "yao4",
+   "qu4",
+   "chi1",
+   "fan4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-qun4-ian2-qu4-le5-shang4-hai3",
+  "level": 4,
+  "score": 13,
+  "zh": "我去年去了上海。",
+  "py": "Wǒ qùnián qù le Shànghǎi.",
+  "en": "I went to Shanghai last year.",
+  "syllables": [
+   "wo3",
+   "qun4",
+   "ian2",
+   "qu4",
+   "le5",
+   "shang4",
+   "hai3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-ming2-tian1-qu4-fan4-dian4",
+  "level": 4,
+  "score": 13,
+  "zh": "他明天去饭店。",
+  "py": "Tā míngtiān qù fàndiàn.",
+  "en": "He is going to the restaurant tomorrow.",
+  "syllables": [
+   "ta1",
+   "ming2",
+   "tian1",
+   "qu4",
+   "fan4",
+   "dian4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-xia4-wu3-qu4-yi1-yuan4",
+  "level": 4,
+  "score": 13,
+  "zh": "他下午去医院。",
+  "py": "Tā xiàwǔ qù yīyuàn.",
+  "en": "He is going to the hospital this afternoon.",
+  "syllables": [
+   "ta1",
+   "xia4",
+   "wu3",
+   "qu4",
+   "yi1",
+   "yuan4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-xia4-wu3-qu4-shu1-dian4",
+  "level": 4,
+  "score": 13,
+  "zh": "她下午去书店。",
+  "py": "Tā xiàwǔ qù shūdiàn.",
+  "en": "She is going to the bookshop this afternoon.",
+  "syllables": [
+   "ta1",
+   "xia4",
+   "wu3",
+   "qu4",
+   "shu1",
+   "dian4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-ming2-tian1-qu4-fan4-dian4-2",
+  "level": 4,
+  "score": 13,
+  "zh": "她明天去饭店。",
+  "py": "Tā míngtiān qù fàndiàn.",
+  "en": "She is going to the restaurant tomorrow.",
+  "syllables": [
+   "ta1",
+   "ming2",
+   "tian1",
+   "qu4",
+   "fan4",
+   "dian4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-zhe4-ge5-dong1-xi5-hen3-gui4",
+  "level": 4,
+  "score": 13,
+  "zh": "这个东西很贵。",
+  "py": "Zhè ge dōngxi hěn guì.",
+  "en": "This thing is expensive.",
+  "syllables": [
+   "zhe4",
+   "ge5",
+   "dong1",
+   "xi5",
+   "hen3",
+   "gui4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-yao4-mai3-dong1-xi5-ma5",
+  "level": 4,
+  "score": 13,
+  "zh": "你要买东西吗？",
+  "py": "Nǐ yào mǎi dōngxi ma?",
+  "en": "Do you want to buy things?",
+  "syllables": [
+   "ni3",
+   "yao4",
+   "mai3",
+   "dong1",
+   "xi5",
+   "ma5"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-mai4-shou3-ji1",
+  "level": 4,
+  "score": 13,
+  "zh": "我卖手机。",
+  "py": "Wǒ mài shǒujī.",
+  "en": "I sell phones.",
+  "syllables": [
+   "wo3",
+   "mai4",
+   "shou3",
+   "ji1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-chuan1-ku4-zi5",
+  "level": 4,
+  "score": 13,
+  "zh": "他穿裤子。",
+  "py": "Tā chuān kùzi.",
+  "en": "He is wearing trousers.",
+  "syllables": [
+   "ta1",
+   "chuan1",
+   "ku4",
+   "zi5"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-mai4-li3-wu4",
+  "level": 4,
+  "score": 13,
+  "zh": "他卖礼物。",
+  "py": "Tā mài lǐwù.",
+  "en": "He sells presents.",
+  "syllables": [
+   "ta1",
+   "mai4",
+   "li3",
+   "wu4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-xu1-yao4-qu4-kan4-shu1",
+  "level": 4,
+  "score": 13,
+  "zh": "你需要去看书。",
+  "py": "Nǐ xūyào qù kàn shū.",
+  "en": "You need to go and read.",
+  "syllables": [
+   "ni3",
+   "xu1",
+   "yao4",
+   "qu4",
+   "kan4",
+   "shu1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-xia4-wu3-qu4-can1-ting1",
+  "level": 4,
+  "score": 13,
+  "zh": "她下午去餐厅。",
+  "py": "Tā xiàwǔ qù cāntīng.",
+  "en": "She is going to the dining room this afternoon.",
+  "syllables": [
+   "ta1",
+   "xia4",
+   "wu3",
+   "qu4",
+   "can1",
+   "ting1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-mai4-ku4-zi5",
+  "level": 4,
+  "score": 13,
+  "zh": "他卖裤子。",
+  "py": "Tā mài kùzi.",
+  "en": "He sells trousers.",
+  "syllables": [
+   "ta1",
+   "mai4",
+   "ku4",
+   "zi5"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-jin1-tian1-qu4-xue2-xiao4",
+  "level": 4,
+  "score": 13,
+  "zh": "他今天去学校。",
+  "py": "Tā jīntiān qù xuéxiào.",
+  "en": "He is going to the school today.",
+  "syllables": [
+   "ta1",
+   "jin1",
+   "tian1",
+   "qu4",
+   "xue2",
+   "xiao4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-mai4-ku4-zi5-2",
+  "level": 4,
+  "score": 13,
+  "zh": "她卖裤子。",
+  "py": "Tā mài kùzi.",
+  "en": "She sells trousers.",
+  "syllables": [
+   "ta1",
+   "mai4",
+   "ku4",
+   "zi5"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-mai4-shou3-tao4",
+  "level": 4,
+  "score": 13,
+  "zh": "他卖手套。",
+  "py": "Tā mài shǒutào.",
+  "en": "He sells gloves.",
+  "syllables": [
+   "ta1",
+   "mai4",
+   "shou3",
+   "tao4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-you2-ju2-hen3-jin4",
+  "level": 4,
+  "score": 13,
+  "zh": "邮局很近。",
+  "py": "Yóujú hěn jìn.",
+  "en": "The post office is close by.",
+  "syllables": [
+   "you2",
+   "ju2",
+   "hen3",
+   "jin4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-xian4-zai4-qu4-gong1-yuan2",
+  "level": 4,
+  "score": 13,
+  "zh": "你现在去公园。",
+  "py": "Nǐ xiànzài qù gōngyuán.",
+  "en": "You are going to the park now.",
+  "syllables": [
+   "ni3",
+   "xian4",
+   "zai4",
+   "qu4",
+   "gong1",
+   "yuan2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-men5-pao3-bu4",
+  "level": 4,
+  "score": 13,
+  "zh": "我们跑步。",
+  "py": "Wǒmen pǎobù.",
+  "en": "We go running.",
+  "syllables": [
+   "wo3",
+   "men5",
+   "pao3",
+   "bu4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-men5-shui4-jiao4",
+  "level": 4,
+  "score": 13,
+  "zh": "他们睡觉。",
+  "py": "Tāmen shuìjiào.",
+  "en": "They are sleeping.",
+  "syllables": [
+   "ta1",
+   "men5",
+   "shui4",
+   "jiao4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-xian4-zai4-qu4-xue2-xiao4",
+  "level": 4,
+  "score": 13,
+  "zh": "你现在去学校。",
+  "py": "Nǐ xiànzài qù xuéxiào.",
+  "en": "You are going to the school now.",
+  "syllables": [
+   "ni3",
+   "xian4",
+   "zai4",
+   "qu4",
+   "xue2",
+   "xiao4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-men5-mai3-dong1-xi5",
+  "level": 4,
+  "score": 13,
+  "zh": "他们买东西。",
+  "py": "Tāmen mǎi dōngxi.",
+  "en": "They are buying things.",
+  "syllables": [
+   "ta1",
+   "men5",
+   "mai3",
+   "dong1",
+   "xi5"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-qun4-ian2-qu4-le5-shang4-hai3",
+  "level": 4,
+  "score": 13,
+  "zh": "她去年去了上海。",
+  "py": "Tā qùnián qù le Shànghǎi.",
+  "en": "She went to Shanghai last year.",
+  "syllables": [
+   "ta1",
+   "qun4",
+   "ian2",
+   "qu4",
+   "le5",
+   "shang4",
+   "hai3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-zhe4-jian4-mao2-yi1-hen3-xin1",
+  "level": 4,
+  "score": 13,
+  "zh": "这件毛衣很新。",
+  "py": "Zhè jiàn máoyī hěn xīn.",
+  "en": "This sweater is new.",
+  "syllables": [
+   "zhe4",
+   "jian4",
+   "mao2",
+   "yi1",
+   "hen3",
+   "xin1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-men5-mai3-da4-yi1",
+  "level": 4,
+  "score": 13,
+  "zh": "我们买大衣。",
+  "py": "Wǒmen mǎi dàyī.",
+  "en": "We are buying an overcoat.",
+  "syllables": [
+   "wo3",
+   "men5",
+   "mai3",
+   "da4",
+   "yi1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-zhe4-jian4-mao2-yi1-hen3-gui4",
+  "level": 4,
+  "score": 13,
+  "zh": "这件毛衣很贵。",
+  "py": "Zhè jiàn máoyī hěn guì.",
+  "en": "This sweater is expensive.",
+  "syllables": [
+   "zhe4",
+   "jian4",
+   "mao2",
+   "yi1",
+   "hen3",
+   "gui4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-xiang3-qu4-chi1-fan4",
+  "level": 4,
+  "score": 13,
+  "zh": "你想去吃饭。",
+  "py": "Nǐ xiǎng qù chīfàn.",
+  "en": "You would like to go and eat.",
+  "syllables": [
+   "ni3",
+   "xiang3",
+   "qu4",
+   "chi1",
+   "fan4"
+  ],
+  "accepted": [
+   [
+    "ni2",
+    "xiang3",
+    "qu4",
+    "chi1",
+    "fan4"
+   ]
+  ]
+ },
+ {
+  "id": "ls-zhe4-ge5-dong1-xi5-hen3-xin1",
+  "level": 4,
+  "score": 13,
+  "zh": "这个东西很新。",
+  "py": "Zhè ge dōngxi hěn xīn.",
+  "en": "This thing is new.",
+  "syllables": [
+   "zhe4",
+   "ge5",
+   "dong1",
+   "xi5",
+   "hen3",
+   "xin1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-men5-mai3-mao2-yi1",
+  "level": 4,
+  "score": 13,
+  "zh": "我们买毛衣。",
+  "py": "Wǒmen mǎi máoyī.",
+  "en": "We are buying a sweater.",
+  "syllables": [
+   "wo3",
+   "men5",
+   "mai3",
+   "mao2",
+   "yi1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-qun4-ian2-qu4-le5-zhong1-guo2",
+  "level": 4,
+  "score": 13,
+  "zh": "她去年去了中国。",
+  "py": "Tā qùnián qù le Zhōngguó.",
+  "en": "She went to China last year.",
+  "syllables": [
+   "ta1",
+   "qun4",
+   "ian2",
+   "qu4",
+   "le5",
+   "zhong1",
+   "guo2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-zhe4-shuang1-xie2-hen3-da4",
+  "level": 4,
+  "score": 13,
+  "zh": "这双鞋很大。",
+  "py": "Zhè shuāng xié hěn dà.",
+  "en": "This pair of shoes is big.",
+  "syllables": [
+   "zhe4",
+   "shuang1",
+   "xie2",
+   "hen3",
+   "da4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-zai4-gong1-chang3",
+  "level": 4,
+  "score": 13,
+  "zh": "你在工厂。",
+  "py": "Nǐ zài gōngchǎng.",
+  "en": "You are in the factory.",
+  "syllables": [
+   "ni3",
+   "zai4",
+   "gong1",
+   "chang3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-men5-mai4-da4-yi1",
+  "level": 4,
+  "score": 13,
+  "zh": "我们卖大衣。",
+  "py": "Wǒmen mài dàyī.",
+  "en": "We sell overcoats.",
+  "syllables": [
+   "wo3",
+   "men5",
+   "mai4",
+   "da4",
+   "yi1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-qun4-ian2-qu4-le5-zhong1-guo2-2",
+  "level": 4,
+  "score": 13,
+  "zh": "他去年去了中国。",
+  "py": "Tā qùnián qù le Zhōngguó.",
+  "en": "He went to China last year.",
+  "syllables": [
+   "ta1",
+   "qun4",
+   "ian2",
+   "qu4",
+   "le5",
+   "zhong1",
+   "guo2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-xiang3-qu4-kan4-shu1",
+  "level": 4,
+  "score": 13,
+  "zh": "她想去看书。",
+  "py": "Tā xiǎng qù kàn shū.",
+  "en": "She would like to go and read.",
+  "syllables": [
+   "ta1",
+   "xiang3",
+   "qu4",
+   "kan4",
+   "shu1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-fang4-uan3-hen3-yuan3",
+  "level": 4,
+  "score": 13,
+  "zh": "饭馆很远。",
+  "py": "Fànguǎn hěn yuǎn.",
+  "en": "The eatery is far away.",
+  "syllables": [
+   "fang4",
+   "uan3",
+   "hen3",
+   "yuan3"
+  ],
+  "accepted": [
+   [
+    "fang4",
+    "uan2",
+    "hen2",
+    "yuan3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-ta1-qun4-ian2-qu4-le5-shang4-hai3-2",
+  "level": 4,
+  "score": 13,
+  "zh": "他去年去了上海。",
+  "py": "Tā qùnián qù le Shànghǎi.",
+  "en": "He went to Shanghai last year.",
+  "syllables": [
+   "ta1",
+   "qun4",
+   "ian2",
+   "qu4",
+   "le5",
+   "shang4",
+   "hai3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-xu1-yao4-qu4-chi1-fan4",
+  "level": 4,
+  "score": 13,
+  "zh": "我需要去吃饭。",
+  "py": "Wǒ xūyào qù chīfàn.",
+  "en": "I need to go and eat.",
+  "syllables": [
+   "wo3",
+   "xu1",
+   "yao4",
+   "qu4",
+   "chi1",
+   "fan4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-gou4-wu4-zhong1-xin1-hen3-da4",
+  "level": 4,
+  "score": 13,
+  "zh": "购物中心很大。",
+  "py": "Gòuwù zhōngxīn hěn dà.",
+  "en": "The shopping centre is big.",
+  "syllables": [
+   "gou4",
+   "wu4",
+   "zhong1",
+   "xin1",
+   "hen3",
+   "da4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-men5-hen3-piao4-liang5",
+  "level": 4,
+  "score": 13,
+  "zh": "他们很漂亮。",
+  "py": "Tāmen hěn piàoliang.",
+  "en": "They are beautiful.",
+  "syllables": [
+   "ta1",
+   "men5",
+   "hen3",
+   "piao4",
+   "liang5"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-zuo4-huo3-che1",
+  "level": 4,
+  "score": 13,
+  "zh": "坐火车。",
+  "py": "Zuò huǒchē.",
+  "en": "Go by train.",
+  "syllables": [
+   "zuo4",
+   "huo3",
+   "che1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-zai4-tu2-shu1-guan3",
+  "level": 4,
+  "score": 13,
+  "zh": "你在图书馆。",
+  "py": "Nǐ zài túshūguǎn.",
+  "en": "You are at the library.",
+  "syllables": [
+   "ni3",
+   "zai4",
+   "tu2",
+   "shu1",
+   "guan3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-you2-ju2-hen3-xiao3",
+  "level": 4,
+  "score": 13,
+  "zh": "邮局很小。",
+  "py": "Yóujú hěn xiǎo.",
+  "en": "The post office is small.",
+  "syllables": [
+   "you2",
+   "ju2",
+   "hen3",
+   "xiao3"
+  ],
+  "accepted": [
+   [
+    "you2",
+    "ju2",
+    "hen2",
+    "xiao3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-ta1-xiang3-qu4-kan4-shu1-2",
+  "level": 4,
+  "score": 13,
+  "zh": "他想去看书。",
+  "py": "Tā xiǎng qù kàn shū.",
+  "en": "He would like to go and read.",
+  "syllables": [
+   "ta1",
+   "xiang3",
+   "qu4",
+   "kan4",
+   "shu1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-zhe4-shuang1-shou3-tao4-hen3-gui4",
+  "level": 4,
+  "score": 14,
+  "zh": "这双手套很贵。",
+  "py": "Zhè shuāng shǒutào hěn guì.",
+  "en": "This pair of gloves is expensive.",
+  "syllables": [
+   "zhe4",
+   "shuang1",
+   "shou3",
+   "tao4",
+   "hen3",
+   "gui4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-gou4-wu4-zhong1-xin1-hen3-xiao3",
+  "level": 4,
+  "score": 14,
+  "zh": "购物中心很小。",
+  "py": "Gòuwù zhōngxīn hěn xiǎo.",
+  "en": "The shopping centre is small.",
+  "syllables": [
+   "gou4",
+   "wu4",
+   "zhong1",
+   "xin1",
+   "hen3",
+   "xiao3"
+  ],
+  "accepted": [
+   [
+    "gou4",
+    "wu4",
+    "zhong1",
+    "xin1",
+    "hen2",
+    "xiao3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-zhe4-ben3-shu1-hen3-hao3-kan4",
+  "level": 4,
+  "score": 14,
+  "zh": "这本书很好看。",
+  "py": "Zhè běn shū hěn hǎokàn.",
+  "en": "This book is good-looking.",
+  "syllables": [
+   "zhe4",
+   "ben3",
+   "shu1",
+   "hen3",
+   "hao3",
+   "kan4"
+  ],
+  "accepted": [
+   [
+    "zhe4",
+    "ben3",
+    "shu1",
+    "hen2",
+    "hao3",
+    "kan4"
+   ]
+  ]
+ },
+ {
+  "id": "ls-ta1-xian4-zai4-qu4-xue2-xiao4",
+  "level": 4,
+  "score": 14,
+  "zh": "他现在去学校。",
+  "py": "Tā xiànzài qù xuéxiào.",
+  "en": "He is going to the school now.",
+  "syllables": [
+   "ta1",
+   "xian4",
+   "zai4",
+   "qu4",
+   "xue2",
+   "xiao4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-zai4-gong1-chang3",
+  "level": 4,
+  "score": 14,
+  "zh": "她在工厂。",
+  "py": "Tā zài gōngchǎng.",
+  "en": "She is in the factory.",
+  "syllables": [
+   "ta1",
+   "zai4",
+   "gong1",
+   "chang3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-zai4-tu2-shu1-guan3",
+  "level": 4,
+  "score": 14,
+  "zh": "他在图书馆。",
+  "py": "Tā zài túshūguǎn.",
+  "en": "He is at the library.",
+  "syllables": [
+   "ta1",
+   "zai4",
+   "tu2",
+   "shu1",
+   "guan3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-zao3-shang5-qu4-you2-ju2",
+  "level": 5,
+  "score": 17,
+  "zh": "他早上去邮局。",
+  "py": "Tā zǎoshang qù yóujú.",
+  "en": "He goes to the post office in the morning.",
+  "syllables": [
+   "ta1",
+   "zao3",
+   "shang5",
+   "qu4",
+   "you2",
+   "ju2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-xing1-qi1-tian1-qu4-yin2-hang2",
+  "level": 5,
+  "score": 17,
+  "zh": "我星期天去银行。",
+  "py": "Wǒ xīngqītiān qù yínháng.",
+  "en": "I go to the bank on Sunday.",
+  "syllables": [
+   "wo3",
+   "xing1",
+   "qi1",
+   "tian1",
+   "qu4",
+   "yin2",
+   "hang2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-zhe4-jian4-chen4-shan1-hen3-xiao3",
+  "level": 5,
+  "score": 17,
+  "zh": "这件衬衫很小。",
+  "py": "Zhè jiàn chènshān hěn xiǎo.",
+  "en": "This shirt is small.",
+  "syllables": [
+   "zhe4",
+   "jian4",
+   "chen4",
+   "shan1",
+   "hen3",
+   "xiao3"
+  ],
+  "accepted": [
+   [
+    "zhe4",
+    "jian4",
+    "chen4",
+    "shan1",
+    "hen2",
+    "xiao3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-ta1-xian4-zai4-qu4-you2-ju2",
+  "level": 5,
+  "score": 17,
+  "zh": "他现在去邮局。",
+  "py": "Tā xiànzài qù yóujú.",
+  "en": "He is going to the post office now.",
+  "syllables": [
+   "ta1",
+   "xian4",
+   "zai4",
+   "qu4",
+   "you2",
+   "ju2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-xian4-zai4-qu4-fan4-dian4",
+  "level": 5,
+  "score": 17,
+  "zh": "他现在去饭店。",
+  "py": "Tā xiànzài qù fàndiàn.",
+  "en": "He is going to the restaurant now.",
+  "syllables": [
+   "ta1",
+   "xian4",
+   "zai4",
+   "qu4",
+   "fan4",
+   "dian4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-zai4-chao1-shi4",
+  "level": 5,
+  "score": 17,
+  "zh": "他在超市。",
+  "py": "Tā zài chāoshì.",
+  "en": "He is at the supermarket.",
+  "syllables": [
+   "ta1",
+   "zai4",
+   "chao1",
+   "shi4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-men5-mai3-wa4-zi5",
+  "level": 5,
+  "score": 17,
+  "zh": "我们买袜子。",
+  "py": "Wǒmen mǎi wàzi.",
+  "en": "We are buying socks.",
+  "syllables": [
+   "wo3",
+   "men5",
+   "mai3",
+   "wa4",
+   "zi5"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-zao3-shang5-qu4-shu1-dian4",
+  "level": 5,
+  "score": 17,
+  "zh": "我早上去书店。",
+  "py": "Wǒ zǎoshang qù shūdiàn.",
+  "en": "I go to the bookshop in the morning.",
+  "syllables": [
+   "wo3",
+   "zao3",
+   "shang5",
+   "qu4",
+   "shu1",
+   "dian4"
+  ],
+  "accepted": [
+   [
+    "wo2",
+    "zao3",
+    "shang5",
+    "qu4",
+    "shu1",
+    "dian4"
+   ]
+  ]
+ },
+ {
+  "id": "ls-qing3-wen4-bei3-jing1-de5-gong1-yuan2-zai4-na",
+  "level": 5,
+  "score": 17,
+  "zh": "请问，北京的公园在哪儿？",
+  "py": "Qǐngwèn, Běijīng de gōngyuán zài nǎr?",
+  "en": "Excuse me, where is the park in Beijing?",
+  "syllables": [
+   "qing3",
+   "wen4",
+   "bei3",
+   "jing1",
+   "de5",
+   "gong1",
+   "yuan2",
+   "zai4",
+   "nar3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-zai4-chao1-shi4-2",
+  "level": 5,
+  "score": 17,
+  "zh": "她在超市。",
+  "py": "Tā zài chāoshì.",
+  "en": "She is at the supermarket.",
+  "syllables": [
+   "ta1",
+   "zai4",
+   "chao1",
+   "shi4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-wan3-shang5-qu4-fan4-dian4",
+  "level": 5,
+  "score": 17,
+  "zh": "他晚上去饭店。",
+  "py": "Tā wǎnshang qù fàndiàn.",
+  "en": "He goes to the restaurant in the evening.",
+  "syllables": [
+   "ta1",
+   "wan3",
+   "shang5",
+   "qu4",
+   "fan4",
+   "dian4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-gong1-chang3-hen3-xiao3",
+  "level": 5,
+  "score": 17,
+  "zh": "工厂很小。",
+  "py": "Gōngchǎng hěn xiǎo.",
+  "en": "The factory is small.",
+  "syllables": [
+   "gong1",
+   "chang3",
+   "hen3",
+   "xiao3"
+  ],
+  "accepted": [
+   [
+    "gong1",
+    "chang2",
+    "hen2",
+    "xiao3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-wo3-men5-mai4-wa4-zi5",
+  "level": 5,
+  "score": 17,
+  "zh": "我们卖袜子。",
+  "py": "Wǒmen mài wàzi.",
+  "en": "We sell socks.",
+  "syllables": [
+   "wo3",
+   "men5",
+   "mai4",
+   "wa4",
+   "zi5"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-wan3-shang5-qu4-shu1-dian4",
+  "level": 5,
+  "score": 17,
+  "zh": "我晚上去书店。",
+  "py": "Wǒ wǎnshang qù shūdiàn.",
+  "en": "I go to the bookshop in the evening.",
+  "syllables": [
+   "wo3",
+   "wan3",
+   "shang5",
+   "qu4",
+   "shu1",
+   "dian4"
+  ],
+  "accepted": [
+   [
+    "wo2",
+    "wan3",
+    "shang5",
+    "qu4",
+    "shu1",
+    "dian4"
+   ]
+  ]
+ },
+ {
+  "id": "ls-ta1-zao3-shang5-qu4-fan4-dian4",
+  "level": 5,
+  "score": 17,
+  "zh": "她早上去饭店。",
+  "py": "Tā zǎoshang qù fàndiàn.",
+  "en": "She goes to the restaurant in the morning.",
+  "syllables": [
+   "ta1",
+   "zao3",
+   "shang5",
+   "qu4",
+   "fan4",
+   "dian4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-yao4-qu4-pa2-shan1",
+  "level": 5,
+  "score": 17,
+  "zh": "我要去爬山。",
+  "py": "Wǒ yào qù páshān.",
+  "en": "I am going to go hiking.",
+  "syllables": [
+   "wo3",
+   "yao4",
+   "qu4",
+   "pa2",
+   "shan1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-yao4-qu4-pa2-shan1",
+  "level": 5,
+  "score": 17,
+  "zh": "他要去爬山。",
+  "py": "Tā yào qù páshān.",
+  "en": "He is going to go hiking.",
+  "syllables": [
+   "ta1",
+   "yao4",
+   "qu4",
+   "pa2",
+   "shan1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-zhe4-tiao2-qun2-zi5-hen3-da4",
+  "level": 5,
+  "score": 17,
+  "zh": "这条裙子很大。",
+  "py": "Zhè tiáo qúnzi hěn dà.",
+  "en": "This skirt is big.",
+  "syllables": [
+   "zhe4",
+   "tiao2",
+   "qun2",
+   "zi5",
+   "hen3",
+   "da4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-zhe4-jian4-mao2-yi1-hen3-pian2-yi5",
+  "level": 5,
+  "score": 17,
+  "zh": "这件毛衣很便宜。",
+  "py": "Zhè jiàn máoyī hěn piányi.",
+  "en": "This sweater is cheap.",
+  "syllables": [
+   "zhe4",
+   "jian4",
+   "mao2",
+   "yi1",
+   "hen3",
+   "pian2",
+   "yi5"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-zuo4-chuan2-qu4-guang3-zhou1",
+  "level": 5,
+  "score": 17,
+  "zh": "你坐船去广州。",
+  "py": "Nǐ zuò chuán qù Guǎngzhōu.",
+  "en": "You are going to Guangzhou by boat.",
+  "syllables": [
+   "ni3",
+   "zuo4",
+   "chuan2",
+   "qu4",
+   "guang3",
+   "zhou1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-zhe4-shuang1-wa4-zi5-hen3-xiao3",
+  "level": 5,
+  "score": 17,
+  "zh": "这双袜子很小。",
+  "py": "Zhè shuāng wàzi hěn xiǎo.",
+  "en": "This pair of socks is small.",
+  "syllables": [
+   "zhe4",
+   "shuang1",
+   "wa4",
+   "zi5",
+   "hen3",
+   "xiao3"
+  ],
+  "accepted": [
+   [
+    "zhe4",
+    "shuang1",
+    "wa4",
+    "zi5",
+    "hen2",
+    "xiao3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-ta1-men5-chi1-xi1-can1",
+  "level": 5,
+  "score": 17,
+  "zh": "他们吃西餐。",
+  "py": "Tāmen chī xīcān.",
+  "en": "They are eating Western food.",
+  "syllables": [
+   "ta1",
+   "men5",
+   "chi1",
+   "xi1",
+   "can1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-da3-suan4-qu4-chi1-fan4",
+  "level": 5,
+  "score": 17,
+  "zh": "我打算去吃饭。",
+  "py": "Wǒ dǎsuàn qù chīfàn.",
+  "en": "I plan to go and eat.",
+  "syllables": [
+   "wo3",
+   "da3",
+   "suan4",
+   "qu4",
+   "chi1",
+   "fan4"
+  ],
+  "accepted": [
+   [
+    "wo2",
+    "da3",
+    "suan4",
+    "qu4",
+    "chi1",
+    "fan4"
+   ]
+  ]
+ },
+ {
+  "id": "ls-wo3-yao4-qu4-pai1-zhao4",
+  "level": 5,
+  "score": 17,
+  "zh": "我要去拍照。",
+  "py": "Wǒ yào qù pāizhào.",
+  "en": "I am going to go and take photos.",
+  "syllables": [
+   "wo3",
+   "yao4",
+   "qu4",
+   "pai1",
+   "zhao4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-men5-mai3-shou3-ji1",
+  "level": 5,
+  "score": 17,
+  "zh": "我们买手机。",
+  "py": "Wǒmen mǎi shǒujī.",
+  "en": "We are buying a phone.",
+  "syllables": [
+   "wo3",
+   "men5",
+   "mai3",
+   "shou3",
+   "ji1"
+  ],
+  "accepted": [
+   [
+    "wo3",
+    "men5",
+    "mai2",
+    "shou3",
+    "ji1"
+   ]
+  ]
+ },
+ {
+  "id": "ls-ta1-yao4-qu4-pai1-zhao4",
+  "level": 5,
+  "score": 17,
+  "zh": "他要去拍照。",
+  "py": "Tā yào qù pāizhào.",
+  "en": "He is going to go and take photos.",
+  "syllables": [
+   "ta1",
+   "yao4",
+   "qu4",
+   "pai1",
+   "zhao4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-xian4-zai4-qu4-you2-ju2",
+  "level": 5,
+  "score": 17,
+  "zh": "我现在去邮局。",
+  "py": "Wǒ xiànzài qù yóujú.",
+  "en": "I am going to the post office now.",
+  "syllables": [
+   "wo3",
+   "xian4",
+   "zai4",
+   "qu4",
+   "you2",
+   "ju2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-shang4-ge5-yue4-qu4-le5-zhong1-guo2",
+  "level": 5,
+  "score": 17,
+  "zh": "她上个月去了中国。",
+  "py": "Tā shàng ge yuè qù le Zhōngguó.",
+  "en": "She went to China last month.",
+  "syllables": [
+   "ta1",
+   "shang4",
+   "ge5",
+   "yue4",
+   "qu4",
+   "le5",
+   "zhong1",
+   "guo2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-zhe4-ge5-dong1-xi5-hen3-pian2-yi5",
+  "level": 5,
+  "score": 17,
+  "zh": "这个东西很便宜。",
+  "py": "Zhè ge dōngxi hěn piányi.",
+  "en": "This thing is cheap.",
+  "syllables": [
+   "zhe4",
+   "ge5",
+   "dong1",
+   "xi5",
+   "hen3",
+   "pian2",
+   "yi5"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-mai4-zhao4-pian4",
+  "level": 5,
+  "score": 17,
+  "zh": "你卖照片。",
+  "py": "Nǐ mài zhàopiàn.",
+  "en": "You sell photos.",
+  "syllables": [
+   "ni3",
+   "mai4",
+   "zhao4",
+   "pian4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-zhe4-jian4-da4-yi1-hen3-xiao3",
+  "level": 5,
+  "score": 17,
+  "zh": "这件大衣很小。",
+  "py": "Zhè jiàn dàyī hěn xiǎo.",
+  "en": "This overcoat is small.",
+  "syllables": [
+   "zhe4",
+   "jian4",
+   "da4",
+   "yi1",
+   "hen3",
+   "xiao3"
+  ],
+  "accepted": [
+   [
+    "zhe4",
+    "jian4",
+    "da4",
+    "yi1",
+    "hen2",
+    "xiao3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-ni3-qun4-ian2-qu4-le5-gui4-lin2",
+  "level": 5,
+  "score": 17,
+  "zh": "你去年去了桂林。",
+  "py": "Nǐ qùnián qù le Guìlín.",
+  "en": "You went to Guilin last year.",
+  "syllables": [
+   "ni3",
+   "qun4",
+   "ian2",
+   "qu4",
+   "le5",
+   "gui4",
+   "lin2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-mai3-wa4-zi5",
+  "level": 5,
+  "score": 17,
+  "zh": "我买袜子。",
+  "py": "Wǒ mǎi wàzi.",
+  "en": "I am buying socks.",
+  "syllables": [
+   "wo3",
+   "mai3",
+   "wa4",
+   "zi5"
+  ],
+  "accepted": [
+   [
+    "wo2",
+    "mai3",
+    "wa4",
+    "zi5"
+   ]
+  ]
+ },
+ {
+  "id": "ls-tu2-shu1-guan3-hen3-jin4",
+  "level": 5,
+  "score": 17,
+  "zh": "图书馆很近。",
+  "py": "Túshūguǎn hěn jìn.",
+  "en": "The library is close by.",
+  "syllables": [
+   "tu2",
+   "shu1",
+   "guan3",
+   "hen3",
+   "jin4"
+  ],
+  "accepted": [
+   [
+    "tu2",
+    "shu1",
+    "guan2",
+    "hen3",
+    "jin4"
+   ]
+  ]
+ },
+ {
+  "id": "ls-wo3-zai4-chao1-shi4",
+  "level": 5,
+  "score": 17,
+  "zh": "我在超市。",
+  "py": "Wǒ zài chāoshì.",
+  "en": "I am at the supermarket.",
+  "syllables": [
+   "wo3",
+   "zai4",
+   "chao1",
+   "shi4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-men5-mai3-shou3-tao4",
+  "level": 5,
+  "score": 17,
+  "zh": "我们买手套。",
+  "py": "Wǒmen mǎi shǒutào.",
+  "en": "We are buying gloves.",
+  "syllables": [
+   "wo3",
+   "men5",
+   "mai3",
+   "shou3",
+   "tao4"
+  ],
+  "accepted": [
+   [
+    "wo3",
+    "men5",
+    "mai2",
+    "shou3",
+    "tao4"
+   ]
+  ]
+ },
+ {
+  "id": "ls-ta1-men5-mai4-shou3-ji1",
+  "level": 5,
+  "score": 17,
+  "zh": "他们卖手机。",
+  "py": "Tāmen mài shǒujī.",
+  "en": "They sell phones.",
+  "syllables": [
+   "ta1",
+   "men5",
+   "mai4",
+   "shou3",
+   "ji1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-gong1-chang3-hen3-jin4",
+  "level": 5,
+  "score": 17,
+  "zh": "工厂很近。",
+  "py": "Gōngchǎng hěn jìn.",
+  "en": "The factory is close by.",
+  "syllables": [
+   "gong1",
+   "chang3",
+   "hen3",
+   "jin4"
+  ],
+  "accepted": [
+   [
+    "gong1",
+    "chang2",
+    "hen3",
+    "jin4"
+   ]
+  ]
+ },
+ {
+  "id": "ls-ta1-xian4-zai4-qu4-fan4-dian4-2",
+  "level": 5,
+  "score": 17,
+  "zh": "她现在去饭店。",
+  "py": "Tā xiànzài qù fàndiàn.",
+  "en": "She is going to the restaurant now.",
+  "syllables": [
+   "ta1",
+   "xian4",
+   "zai4",
+   "qu4",
+   "fan4",
+   "dian4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-chao1-shi4-hen3-da4",
+  "level": 5,
+  "score": 17,
+  "zh": "超市很大。",
+  "py": "Chāoshì hěn dà.",
+  "en": "The supermarket is big.",
+  "syllables": [
+   "chao1",
+   "shi4",
+   "hen3",
+   "da4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-xian4-zai4-qu4-fan4-dian4",
+  "level": 5,
+  "score": 17,
+  "zh": "我现在去饭店。",
+  "py": "Wǒ xiànzài qù fàndiàn.",
+  "en": "I am going to the restaurant now.",
+  "syllables": [
+   "wo3",
+   "xian4",
+   "zai4",
+   "qu4",
+   "fan4",
+   "dian4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-tu2-shu1-guan3-hen3-xiao3",
+  "level": 5,
+  "score": 17,
+  "zh": "图书馆很小。",
+  "py": "Túshūguǎn hěn xiǎo.",
+  "en": "The library is small.",
+  "syllables": [
+   "tu2",
+   "shu1",
+   "guan3",
+   "hen3",
+   "xiao3"
+  ],
+  "accepted": [
+   [
+    "tu2",
+    "shu1",
+    "guan2",
+    "hen2",
+    "xiao3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-wo3-shang4-ge5-yue4-qu4-le5-shang4-hai3",
+  "level": 5,
+  "score": 17,
+  "zh": "我上个月去了上海。",
+  "py": "Wǒ shàng ge yuè qù le Shànghǎi.",
+  "en": "I went to Shanghai last month.",
+  "syllables": [
+   "wo3",
+   "shang4",
+   "ge5",
+   "yue4",
+   "qu4",
+   "le5",
+   "shang4",
+   "hai3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-mai3-shou3-ji1",
+  "level": 5,
+  "score": 17,
+  "zh": "我买手机。",
+  "py": "Wǒ mǎi shǒujī.",
+  "en": "I am buying a phone.",
+  "syllables": [
+   "wo3",
+   "mai3",
+   "shou3",
+   "ji1"
+  ],
+  "accepted": [
+   [
+    "wo2",
+    "mai2",
+    "shou3",
+    "ji1"
+   ]
+  ]
+ },
+ {
+  "id": "ls-ni3-xu1-yao4-qu4-mai3-dong1-xi5",
+  "level": 5,
+  "score": 17,
+  "zh": "你需要去买东西。",
+  "py": "Nǐ xūyào qù mǎi dōngxi.",
+  "en": "You need to go shopping.",
+  "syllables": [
+   "ni3",
+   "xu1",
+   "yao4",
+   "qu4",
+   "mai3",
+   "dong1",
+   "xi5"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-shang4-ge5-yue4-qu4-le5-shang4-hai3",
+  "level": 5,
+  "score": 17,
+  "zh": "她上个月去了上海。",
+  "py": "Tā shàng ge yuè qù le Shànghǎi.",
+  "en": "She went to Shanghai last month.",
+  "syllables": [
+   "ta1",
+   "shang4",
+   "ge5",
+   "yue4",
+   "qu4",
+   "le5",
+   "shang4",
+   "hai3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-fan4-dian4-hen3-you3-ming2",
+  "level": 5,
+  "score": 17,
+  "zh": "饭店很有名。",
+  "py": "Fàndiàn hěn yǒumíng.",
+  "en": "The restaurant is famous.",
+  "syllables": [
+   "fan4",
+   "dian4",
+   "hen3",
+   "you3",
+   "ming2"
+  ],
+  "accepted": [
+   [
+    "fan4",
+    "dian4",
+    "hen2",
+    "you3",
+    "ming2"
+   ]
+  ]
+ },
+ {
+  "id": "ls-ta1-xian4-zai4-qu4-you2-ju2-2",
+  "level": 5,
+  "score": 17,
+  "zh": "她现在去邮局。",
+  "py": "Tā xiànzài qù yóujú.",
+  "en": "She is going to the post office now.",
+  "syllables": [
+   "ta1",
+   "xian4",
+   "zai4",
+   "qu4",
+   "you2",
+   "ju2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-zuo4-fei1-ji1",
+  "level": 5,
+  "score": 17,
+  "zh": "坐飞机。",
+  "py": "Zuò fēijī.",
+  "en": "Go by plane.",
+  "syllables": [
+   "zuo4",
+   "fei1",
+   "ji1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-shang4-ge5-yue4-qu4-le5-zhong1-guo2",
+  "level": 5,
+  "score": 17,
+  "zh": "我上个月去了中国。",
+  "py": "Wǒ shàng ge yuè qù le Zhōngguó.",
+  "en": "I went to China last month.",
+  "syllables": [
+   "wo3",
+   "shang4",
+   "ge5",
+   "yue4",
+   "qu4",
+   "le5",
+   "zhong1",
+   "guo2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-zuo4-huo3-che1-qu4-gui4-lin2",
+  "level": 6,
+  "score": 27,
+  "zh": "他坐火车去桂林。",
+  "py": "Tā zuò huǒchē qù Guìlín.",
+  "en": "He is going to Guilin by train.",
+  "syllables": [
+   "ta1",
+   "zuo4",
+   "huo3",
+   "che1",
+   "qu4",
+   "gui4",
+   "lin2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-xing1-qi1-tian1-qu4-chao1-shi4",
+  "level": 6,
+  "score": 27,
+  "zh": "他星期天去超市。",
+  "py": "Tā xīngqītiān qù chāoshì.",
+  "en": "He goes to the supermarket on Sunday.",
+  "syllables": [
+   "ta1",
+   "xing1",
+   "qi1",
+   "tian1",
+   "qu4",
+   "chao1",
+   "shi4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-wan3-shang5-qu4-shi4-chang3",
+  "level": 6,
+  "score": 27,
+  "zh": "我晚上去市场。",
+  "py": "Wǒ wǎnshang qù shìchǎng.",
+  "en": "I go to the market in the evening.",
+  "syllables": [
+   "wo3",
+   "wan3",
+   "shang5",
+   "qu4",
+   "shi4",
+   "chang3"
+  ],
+  "accepted": [
+   [
+    "wo2",
+    "wan3",
+    "shang5",
+    "qu4",
+    "shi4",
+    "chang3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-ta1-xing1-qi1-tian1-qu4-chao1-shi4-2",
+  "level": 6,
+  "score": 27,
+  "zh": "她星期天去超市。",
+  "py": "Tā xīngqītiān qù chāoshì.",
+  "en": "She goes to the supermarket on Sunday.",
+  "syllables": [
+   "ta1",
+   "xing1",
+   "qi1",
+   "tian1",
+   "qu4",
+   "chao1",
+   "shi4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-ke3-yi3-qu4-lv3-xing2",
+  "level": 6,
+  "score": 27,
+  "zh": "我可以去旅行。",
+  "py": "Wǒ kěyǐ qù lǚxíng.",
+  "en": "I can go travelling.",
+  "syllables": [
+   "wo3",
+   "ke3",
+   "yi3",
+   "qu4",
+   "lv3",
+   "xing2"
+  ],
+  "accepted": [
+   [
+    "wo2",
+    "ke2",
+    "yi3",
+    "qu4",
+    "lv3",
+    "xing2"
+   ]
+  ]
+ },
+ {
+  "id": "ls-chao1-shi4-li2-zher4-hen3-jin4",
+  "level": 6,
+  "score": 27,
+  "zh": "超市离这儿很近。",
+  "py": "Chāoshì lí zhèr hěn jìn.",
+  "en": "The supermarket is close to here.",
+  "syllables": [
+   "chao1",
+   "shi4",
+   "li2",
+   "zher4",
+   "hen3",
+   "jin4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-qing3-wen4-bei3-jing1-de5-chao1-shi4-zai4-nar",
+  "level": 6,
+  "score": 27,
+  "zh": "请问，北京的超市在哪儿？",
+  "py": "Qǐngwèn, Běijīng de chāoshì zài nǎr?",
+  "en": "Excuse me, where is the supermarket in Beijing?",
+  "syllables": [
+   "qing3",
+   "wen4",
+   "bei3",
+   "jing1",
+   "de5",
+   "chao1",
+   "shi4",
+   "zai4",
+   "nar3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-da3-suan4-qu4-lv3-xing2",
+  "level": 6,
+  "score": 27,
+  "zh": "我打算去旅行。",
+  "py": "Wǒ dǎsuàn qù lǚxíng.",
+  "en": "I plan to go travelling.",
+  "syllables": [
+   "wo3",
+   "da3",
+   "suan4",
+   "qu4",
+   "lv3",
+   "xing2"
+  ],
+  "accepted": [
+   [
+    "wo2",
+    "da3",
+    "suan4",
+    "qu4",
+    "lv3",
+    "xing2"
+   ]
+  ]
+ },
+ {
+  "id": "ls-gong1-chang3-li2-zher4-hen3-yuan3",
+  "level": 6,
+  "score": 27,
+  "zh": "工厂离这儿很远。",
+  "py": "Gōngchǎng lí zhèr hěn yuǎn.",
+  "en": "The factory is a long way from here.",
+  "syllables": [
+   "gong1",
+   "chang3",
+   "li2",
+   "zher4",
+   "hen3",
+   "yuan3"
+  ],
+  "accepted": [
+   [
+    "gong1",
+    "chang3",
+    "li2",
+    "zher4",
+    "hen2",
+    "yuan3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-ni3-da3-suan4-qu4-you2-lan3",
+  "level": 6,
+  "score": 27,
+  "zh": "你打算去游览。",
+  "py": "Nǐ dǎsuàn qù yóulǎn.",
+  "en": "You plan to go sightseeing.",
+  "syllables": [
+   "ni3",
+   "da3",
+   "suan4",
+   "qu4",
+   "you2",
+   "lan3"
+  ],
+  "accepted": [
+   [
+    "ni2",
+    "da3",
+    "suan4",
+    "qu4",
+    "you2",
+    "lan3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-tu2-shu1-guan3-li2-zher4-hen3-yuan3",
+  "level": 6,
+  "score": 27,
+  "zh": "图书馆离这儿很远。",
+  "py": "Túshūguǎn lí zhèr hěn yuǎn.",
+  "en": "The library is a long way from here.",
+  "syllables": [
+   "tu2",
+   "shu1",
+   "guan3",
+   "li2",
+   "zher4",
+   "hen3",
+   "yuan3"
+  ],
+  "accepted": [
+   [
+    "tu2",
+    "shu1",
+    "guan3",
+    "li2",
+    "zher4",
+    "hen2",
+    "yuan3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-ta1-zuo4-huo3-che1-qu4-gui4-lin2-2",
+  "level": 6,
+  "score": 27,
+  "zh": "她坐火车去桂林。",
+  "py": "Tā zuò huǒchē qù Guìlín.",
+  "en": "She is going to Guilin by train.",
+  "syllables": [
+   "ta1",
+   "zuo4",
+   "huo3",
+   "che1",
+   "qu4",
+   "gui4",
+   "lin2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-wan3-shang5-qu4-shi4-chang3",
+  "level": 6,
+  "score": 27,
+  "zh": "你晚上去市场。",
+  "py": "Nǐ wǎnshang qù shìchǎng.",
+  "en": "You go to the market in the evening.",
+  "syllables": [
+   "ni3",
+   "wan3",
+   "shang5",
+   "qu4",
+   "shi4",
+   "chang3"
+  ],
+  "accepted": [
+   [
+    "ni2",
+    "wan3",
+    "shang5",
+    "qu4",
+    "shi4",
+    "chang3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-wo3-zuo4-huo3-che1-qu4-gui4-lin2",
+  "level": 6,
+  "score": 27,
+  "zh": "我坐火车去桂林。",
+  "py": "Wǒ zuò huǒchē qù Guìlín.",
+  "en": "I am going to Guilin by train.",
+  "syllables": [
+   "wo3",
+   "zuo4",
+   "huo3",
+   "che1",
+   "qu4",
+   "gui4",
+   "lin2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-xing1-qi1-tian1-qu4-shi4-chang3",
+  "level": 6,
+  "score": 27,
+  "zh": "你星期天去市场。",
+  "py": "Nǐ xīngqītiān qù shìchǎng.",
+  "en": "You go to the market on Sunday.",
+  "syllables": [
+   "ni3",
+   "xing1",
+   "qi1",
+   "tian1",
+   "qu4",
+   "shi4",
+   "chang3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-zao3-shang5-qu4-shi4-chang3",
+  "level": 6,
+  "score": 27,
+  "zh": "你早上去市场。",
+  "py": "Nǐ zǎoshang qù shìchǎng.",
+  "en": "You go to the market in the morning.",
+  "syllables": [
+   "ni3",
+   "zao3",
+   "shang5",
+   "qu4",
+   "shi4",
+   "chang3"
+  ],
+  "accepted": [
+   [
+    "ni2",
+    "zao3",
+    "shang5",
+    "qu4",
+    "shi4",
+    "chang3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-ni3-ke3-yi3-qu4-you2-lan3",
+  "level": 6,
+  "score": 27,
+  "zh": "你可以去游览。",
+  "py": "Nǐ kěyǐ qù yóulǎn.",
+  "en": "You can go sightseeing.",
+  "syllables": [
+   "ni3",
+   "ke3",
+   "yi3",
+   "qu4",
+   "you2",
+   "lan3"
+  ],
+  "accepted": [
+   [
+    "ni2",
+    "ke2",
+    "yi3",
+    "qu4",
+    "you2",
+    "lan3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-wo3-ying1-gai1-qu4-you2-lan3",
+  "level": 6,
+  "score": 27,
+  "zh": "我应该去游览。",
+  "py": "Wǒ yīnggāi qù yóulǎn.",
+  "en": "I should go sightseeing.",
+  "syllables": [
+   "wo3",
+   "ying1",
+   "gai1",
+   "qu4",
+   "you2",
+   "lan3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-wo3-ke3-yi3-qu4-you2-lan3",
+  "level": 6,
+  "score": 28,
+  "zh": "我可以去游览。",
+  "py": "Wǒ kěyǐ qù yóulǎn.",
+  "en": "I can go sightseeing.",
+  "syllables": [
+   "wo3",
+   "ke3",
+   "yi3",
+   "qu4",
+   "you2",
+   "lan3"
+  ],
+  "accepted": [
+   [
+    "wo2",
+    "ke2",
+    "yi3",
+    "qu4",
+    "you2",
+    "lan3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-wo3-da3-suan4-qu4-you2-lan3",
+  "level": 6,
+  "score": 28,
+  "zh": "我打算去游览。",
+  "py": "Wǒ dǎsuàn qù yóulǎn.",
+  "en": "I plan to go sightseeing.",
+  "syllables": [
+   "wo3",
+   "da3",
+   "suan4",
+   "qu4",
+   "you2",
+   "lan3"
+  ],
+  "accepted": [
+   [
+    "wo2",
+    "da3",
+    "suan4",
+    "qu4",
+    "you2",
+    "lan3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-ta1-ying1-gai1-qu4-lv3-xing2",
+  "level": 6,
+  "score": 28,
+  "zh": "她应该去旅行。",
+  "py": "Tā yīnggāi qù lǚxíng.",
+  "en": "She should go travelling.",
+  "syllables": [
+   "ta1",
+   "ying1",
+   "gai1",
+   "qu4",
+   "lv3",
+   "xing2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-ying1-gai1-qu4-lv3-xing2-2",
+  "level": 6,
+  "score": 28,
+  "zh": "他应该去旅行。",
+  "py": "Tā yīnggāi qù lǚxíng.",
+  "en": "He should go travelling.",
+  "syllables": [
+   "ta1",
+   "ying1",
+   "gai1",
+   "qu4",
+   "lv3",
+   "xing2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-shi4-chang3-hen3-you3-ming2",
+  "level": 6,
+  "score": 28,
+  "zh": "市场很有名。",
+  "py": "Shìchǎng hěn yǒumíng.",
+  "en": "The market is famous.",
+  "syllables": [
+   "shi4",
+   "chang3",
+   "hen3",
+   "you3",
+   "ming2"
+  ],
+  "accepted": [
+   [
+    "shi4",
+    "chang2",
+    "hen2",
+    "you3",
+    "ming2"
+   ]
+  ]
+ },
+ {
+  "id": "ls-chao1-shi4-li2-zher4-hen3-yuan3",
+  "level": 6,
+  "score": 28,
+  "zh": "超市离这儿很远。",
+  "py": "Chāoshì lí zhèr hěn yuǎn.",
+  "en": "The supermarket is a long way from here.",
+  "syllables": [
+   "chao1",
+   "shi4",
+   "li2",
+   "zher4",
+   "hen3",
+   "yuan3"
+  ],
+  "accepted": [
+   [
+    "chao1",
+    "shi4",
+    "li2",
+    "zher4",
+    "hen2",
+    "yuan3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-ni3-xi3-huan5-zhong1-can1-hai2-shi5-xi1-can1",
+  "level": 6,
+  "score": 28,
+  "zh": "你喜欢中餐还是西餐？",
+  "py": "Nǐ xǐhuan zhōngcān háishi xīcān?",
+  "en": "Do you like Chinese food or Western food?",
+  "syllables": [
+   "ni3",
+   "xi3",
+   "huan5",
+   "zhong1",
+   "can1",
+   "hai2",
+   "shi5",
+   "xi1",
+   "can1"
+  ],
+  "accepted": [
+   [
+    "ni2",
+    "xi3",
+    "huan5",
+    "zhong1",
+    "can1",
+    "hai2",
+    "shi5",
+    "xi1",
+    "can1"
+   ]
+  ]
+ },
+ {
+  "id": "ls-fu4-jin4-you3-mei2-you3-you2-ju2",
+  "level": 6,
+  "score": 28,
+  "zh": "附近有没有邮局？",
+  "py": "Fùjìn yǒu méi yǒu yóujú?",
+  "en": "Is there a post office nearby?",
+  "syllables": [
+   "fu4",
+   "jin4",
+   "you3",
+   "mei2",
+   "you3",
+   "you2",
+   "ju2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-qing3-wen4-shang4-hai3-de5-chao1-shi4-zai4-na",
+  "level": 6,
+  "score": 28,
+  "zh": "请问，上海的超市在哪儿？",
+  "py": "Qǐngwèn, Shànghǎi de chāoshì zài nǎr?",
+  "en": "Excuse me, where is the supermarket in Shanghai?",
+  "syllables": [
+   "qing3",
+   "wen4",
+   "shang4",
+   "hai3",
+   "de5",
+   "chao1",
+   "shi4",
+   "zai4",
+   "nar3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-fu4-jin4-you3-mei2-you3-gong1-chang3",
+  "level": 6,
+  "score": 29,
+  "zh": "附近有没有工厂？",
+  "py": "Fùjìn yǒu méi yǒu gōngchǎng?",
+  "en": "Is there a factory nearby?",
+  "syllables": [
+   "fu4",
+   "jin4",
+   "you3",
+   "mei2",
+   "you3",
+   "gong1",
+   "chang3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-ying1-gai1-qu4-you2-lan3",
+  "level": 6,
+  "score": 29,
+  "zh": "她应该去游览。",
+  "py": "Tā yīnggāi qù yóulǎn.",
+  "en": "She should go sightseeing.",
+  "syllables": [
+   "ta1",
+   "ying1",
+   "gai1",
+   "qu4",
+   "you2",
+   "lan3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-ying1-gai1-qu4-you2-lan3-2",
+  "level": 6,
+  "score": 29,
+  "zh": "他应该去游览。",
+  "py": "Tā yīnggāi qù yóulǎn.",
+  "en": "He should go sightseeing.",
+  "syllables": [
+   "ta1",
+   "ying1",
+   "gai1",
+   "qu4",
+   "you2",
+   "lan3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-qing3-wen4-bei3-jing1-de5-shi4-chang3-zai4-na",
+  "level": 6,
+  "score": 29,
+  "zh": "请问，北京的市场在哪儿？",
+  "py": "Qǐngwèn, Běijīng de shìchǎng zài nǎr?",
+  "en": "Excuse me, where is the market in Beijing?",
+  "syllables": [
+   "qing3",
+   "wen4",
+   "bei3",
+   "jing1",
+   "de5",
+   "shi4",
+   "chang3",
+   "zai4",
+   "nar3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-zuo4-di4-tie3-qu4-gui4-lin2",
+  "level": 6,
+  "score": 29,
+  "zh": "你坐地铁去桂林。",
+  "py": "Nǐ zuò dìtiě qù Guìlín.",
+  "en": "You are going to Guilin by underground.",
+  "syllables": [
+   "ni3",
+   "zuo4",
+   "di4",
+   "tie3",
+   "qu4",
+   "gui4",
+   "lin2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-zuo4-di4-tie3-qu4-gui4-lin2",
+  "level": 6,
+  "score": 30,
+  "zh": "她坐地铁去桂林。",
+  "py": "Tā zuò dìtiě qù Guìlín.",
+  "en": "She is going to Guilin by underground.",
+  "syllables": [
+   "ta1",
+   "zuo4",
+   "di4",
+   "tie3",
+   "qu4",
+   "gui4",
+   "lin2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-zuo4-gong1-gong4-qi4-che1-qu4-guang3-zhou",
+  "level": 6,
+  "score": 30,
+  "zh": "你坐公共汽车去广州。",
+  "py": "Nǐ zuò gōnggòng qìchē qù Guǎngzhōu.",
+  "en": "You are going to Guangzhou by bus.",
+  "syllables": [
+   "ni3",
+   "zuo4",
+   "gong1",
+   "gong4",
+   "qi4",
+   "che1",
+   "qu4",
+   "guang3",
+   "zhou1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-fu4-jin4-you3-mei2-you3-gou4-wu4-zhong1-xin1",
+  "level": 6,
+  "score": 30,
+  "zh": "附近有没有购物中心？",
+  "py": "Fùjìn yǒu méi yǒu gòuwù zhōngxīn?",
+  "en": "Is there a shopping centre nearby?",
+  "syllables": [
+   "fu4",
+   "jin4",
+   "you3",
+   "mei2",
+   "you3",
+   "gou4",
+   "wu4",
+   "zhong1",
+   "xin1"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-qing3-wen4-shang4-hai3-de5-shi4-chang3-zai4-n",
+  "level": 6,
+  "score": 30,
+  "zh": "请问，上海的市场在哪儿？",
+  "py": "Qǐngwèn, Shànghǎi de shìchǎng zài nǎr?",
+  "en": "Excuse me, where is the market in Shanghai?",
+  "syllables": [
+   "qing3",
+   "wen4",
+   "shang4",
+   "hai3",
+   "de5",
+   "shi4",
+   "chang3",
+   "zai4",
+   "nar3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-fu4-jin4-you3-mei2-you3-chao1-shi4",
+  "level": 6,
+  "score": 31,
+  "zh": "附近有没有超市？",
+  "py": "Fùjìn yǒu méi yǒu chāoshì?",
+  "en": "Is there a supermarket nearby?",
+  "syllables": [
+   "fu4",
+   "jin4",
+   "you3",
+   "mei2",
+   "you3",
+   "chao1",
+   "shi4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-fu4-jin4-you3-mei2-you3-tu2-shu1-guan3",
+  "level": 6,
+  "score": 31,
+  "zh": "附近有没有图书馆？",
+  "py": "Fùjìn yǒu méi yǒu túshūguǎn?",
+  "en": "Is there a library nearby?",
+  "syllables": [
+   "fu4",
+   "jin4",
+   "you3",
+   "mei2",
+   "you3",
+   "tu2",
+   "shu1",
+   "guan3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-shi4-chang3-li2-zher4-hen3-jin4",
+  "level": 6,
+  "score": 31,
+  "zh": "市场离这儿很近。",
+  "py": "Shìchǎng lí zhèr hěn jìn.",
+  "en": "The market is close to here.",
+  "syllables": [
+   "shi4",
+   "chang3",
+   "li2",
+   "zher4",
+   "hen3",
+   "jin4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-shi4-chang3-li2-zher4-hen3-yuan3",
+  "level": 6,
+  "score": 32,
+  "zh": "市场离这儿很远。",
+  "py": "Shìchǎng lí zhèr hěn yuǎn.",
+  "en": "The market is a long way from here.",
+  "syllables": [
+   "shi4",
+   "chang3",
+   "li2",
+   "zher4",
+   "hen3",
+   "yuan3"
+  ],
+  "accepted": [
+   [
+    "shi4",
+    "chang3",
+    "li2",
+    "zher4",
+    "hen2",
+    "yuan3"
+   ]
+  ]
+ },
+ {
+  "id": "ls-ta1-xiang3-qu4-gong1-yuan2-dan4-shi4-gong1-yu",
+  "level": 6,
+  "score": 33,
+  "zh": "他想去公园，但是公园很贵。",
+  "py": "Tā xiǎng qù gōngyuán, dànshì gōngyuán hěn guì.",
+  "en": "He would like to go to the park, but it is expensive.",
+  "syllables": [
+   "ta1",
+   "xiang3",
+   "qu4",
+   "gong1",
+   "yuan2",
+   "dan4",
+   "shi4",
+   "gong1",
+   "yuan2",
+   "hen3",
+   "gui4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-qing3-wen4-gui4-lin2-de5-chao1-shi4-zai4-nar3",
+  "level": 6,
+  "score": 33,
+  "zh": "请问，桂林的超市在哪儿？",
+  "py": "Qǐngwèn, Guìlín de chāoshì zài nǎr?",
+  "en": "Excuse me, where is the supermarket in Guilin?",
+  "syllables": [
+   "qing3",
+   "wen4",
+   "gui4",
+   "lin2",
+   "de5",
+   "chao1",
+   "shi4",
+   "zai4",
+   "nar3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-fu4-jin4-you3-mei2-you3-shi4-chang3",
+  "level": 6,
+  "score": 33,
+  "zh": "附近有没有市场？",
+  "py": "Fùjìn yǒu méi yǒu shìchǎng?",
+  "en": "Is there a market nearby?",
+  "syllables": [
+   "fu4",
+   "jin4",
+   "you3",
+   "mei2",
+   "you3",
+   "shi4",
+   "chang3"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-xiang3-qu4-xue2-xiao4-dan4-shi4-xue2-xiao",
+  "level": 6,
+  "score": 33,
+  "zh": "他想去学校，但是学校很贵。",
+  "py": "Tā xiǎng qù xuéxiào, dànshì xuéxiào hěn guì.",
+  "en": "He would like to go to the school, but it is expensive.",
+  "syllables": [
+   "ta1",
+   "xiang3",
+   "qu4",
+   "xue2",
+   "xiao4",
+   "dan4",
+   "shi4",
+   "xue2",
+   "xiao4",
+   "hen3",
+   "gui4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-xiang3-qu4-gong1-yuan2-dan4-shi4-gong1-yu",
+  "level": 6,
+  "score": 34,
+  "zh": "你想去公园，但是公园很贵。",
+  "py": "Nǐ xiǎng qù gōngyuán, dànshì gōngyuán hěn guì.",
+  "en": "You would like to go to the park, but it is expensive.",
+  "syllables": [
+   "ni3",
+   "xiang3",
+   "qu4",
+   "gong1",
+   "yuan2",
+   "dan4",
+   "shi4",
+   "gong1",
+   "yuan2",
+   "hen3",
+   "gui4"
+  ],
+  "accepted": [
+   [
+    "ni2",
+    "xiang3",
+    "qu4",
+    "gong1",
+    "yuan2",
+    "dan4",
+    "shi4",
+    "gong1",
+    "yuan2",
+    "hen3",
+    "gui4"
+   ]
+  ]
+ },
+ {
+  "id": "ls-ni3-xian4-zai4-zuo4-chuan2-qu4-bei3-jing1-lv3",
+  "level": 6,
+  "score": 34,
+  "zh": "你现在坐船去北京旅行。",
+  "py": "Nǐ xiànzài zuò chuán qù Běijīng lǚxíng.",
+  "en": "You are going to Beijing by boat now for a trip.",
+  "syllables": [
+   "ni3",
+   "xian4",
+   "zai4",
+   "zuo4",
+   "chuan2",
+   "qu4",
+   "bei3",
+   "jing1",
+   "lv3",
+   "xing2"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ni3-xiang3-qu4-xue2-xiao4-dan4-shi4-xue2-xiao",
+  "level": 6,
+  "score": 34,
+  "zh": "你想去学校，但是学校很贵。",
+  "py": "Nǐ xiǎng qù xuéxiào, dànshì xuéxiào hěn guì.",
+  "en": "You would like to go to the school, but it is expensive.",
+  "syllables": [
+   "ni3",
+   "xiang3",
+   "qu4",
+   "xue2",
+   "xiao4",
+   "dan4",
+   "shi4",
+   "xue2",
+   "xiao4",
+   "hen3",
+   "gui4"
+  ],
+  "accepted": [
+   [
+    "ni2",
+    "xiang3",
+    "qu4",
+    "xue2",
+    "xiao4",
+    "dan4",
+    "shi4",
+    "xue2",
+    "xiao4",
+    "hen3",
+    "gui4"
+   ]
+  ]
+ },
+ {
+  "id": "ls-wo3-xiang3-qu4-xue2-xiao4-dan4-shi4-xue2-xiao",
+  "level": 6,
+  "score": 35,
+  "zh": "我想去学校，但是学校很贵。",
+  "py": "Wǒ xiǎng qù xuéxiào, dànshì xuéxiào hěn guì.",
+  "en": "I would like to go to the school, but it is expensive.",
+  "syllables": [
+   "wo3",
+   "xiang3",
+   "qu4",
+   "xue2",
+   "xiao4",
+   "dan4",
+   "shi4",
+   "xue2",
+   "xiao4",
+   "hen3",
+   "gui4"
+  ],
+  "accepted": [
+   [
+    "wo2",
+    "xiang3",
+    "qu4",
+    "xue2",
+    "xiao4",
+    "dan4",
+    "shi4",
+    "xue2",
+    "xiao4",
+    "hen3",
+    "gui4"
+   ]
+  ]
+ },
+ {
+  "id": "ls-ta1-xiang3-qu4-shu1-dian4-dan4-shi4-shu1-dian",
+  "level": 6,
+  "score": 35,
+  "zh": "他想去书店，但是书店很贵。",
+  "py": "Tā xiǎng qù shūdiàn, dànshì shūdiàn hěn guì.",
+  "en": "He would like to go to the bookshop, but it is expensive.",
+  "syllables": [
+   "ta1",
+   "xiang3",
+   "qu4",
+   "shu1",
+   "dian4",
+   "dan4",
+   "shi4",
+   "shu1",
+   "dian4",
+   "hen3",
+   "gui4"
+  ],
+  "accepted": []
+ },
+ {
+  "id": "ls-ta1-xian4-zai4-zuo4-chuan2-qu4-bei3-jing1-lv3",
+  "level": 6,
+  "score": 35,
+  "zh": "他现在坐船去北京旅行。",
+  "py": "Tā xiànzài zuò chuán qù Běijīng lǚxíng.",
+  "en": "He is going to Beijing by boat now for a trip.",
+  "syllables": [
+   "ta1",
+   "xian4",
+   "zai4",
+   "zuo4",
+   "chuan2",
+   "qu4",
+   "bei3",
+   "jing1",
+   "lv3",
+   "xing2"
+  ],
+  "accepted": []
  }
 ]
